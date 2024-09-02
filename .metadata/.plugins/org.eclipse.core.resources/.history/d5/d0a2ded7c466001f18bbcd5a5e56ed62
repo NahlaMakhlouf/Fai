@@ -1,0 +1,75 @@
+package Tests;
+
+import Pages.LoginPage;
+import Pages.DashboardPage;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import Pages.CompanyDashboardPage;
+import Pages.PurchasesPage;
+import Pages.SalesPage;
+import TestData.ExcelDataProvider;
+import Pages.CreateNewInvoicePage;
+
+public class CreateNewInvoiceTest extends TestBase {
+	LoginPage loginPage;
+	DashboardPage dashboard;
+	CompanyDashboardPage companyDashboard;
+	SalesPage salesModule;
+	PurchasesPage purchasesModule;
+	CreateNewInvoicePage createNewInvoicePage;
+
+	@BeforeClass
+	public void beforeClass() {
+		loginPage = new LoginPage(driver);
+		dashboard = new DashboardPage(driver);
+		companyDashboard = new CompanyDashboardPage(driver);
+		salesModule = new SalesPage(driver);
+		purchasesModule = new PurchasesPage(driver);
+		createNewInvoicePage = new CreateNewInvoicePage(driver);
+	}
+
+	@BeforeMethod
+	public void login() throws InterruptedException {
+		loginPage.login("nahlamakhlouf1@gmail.com", "123456");
+		dashboard.browseCompany("Automation");
+	}
+
+	@DataProvider
+	public static Object[][] getSalesInvoiceData() throws FileNotFoundException, IOException {
+		ExcelDataProvider.openExcel(".\\src\\test\\resources\\data.xlsx", "salesInvoices");
+		Object[][] data = ExcelDataProvider.getSheetData();
+		return data;
+	}
+	
+	@DataProvider
+	public static Object[][] getPurchasesInvoiceData() throws FileNotFoundException, IOException {
+		ExcelDataProvider.openExcel(".\\src\\test\\resources\\data.xlsx", "purchasesInvoices");
+		Object[][] data = ExcelDataProvider.getSheetData();
+		return data;
+	}
+
+	@Test(dataProvider = "getSalesInvoiceData")
+	public void createNewSalesInvoice(String invoiceNumber, String clientName, String invoiceDate, String payementDate,
+			String invoiceNotes, String product, String category, String productDescription, String quantity,
+			String discount, String VATCode) throws InterruptedException {
+		
+		companyDashboard.openModule("sales");
+		salesModule.openCreateInvoicePage();
+		Assert.assertEquals(createNewInvoicePage.getStepInfo(), "1 - البيانات الأساسية");
+		createNewInvoicePage.CreateNewInvoiceStep1(invoiceNumber, clientName, invoiceDate, payementDate, invoiceNotes);
+
+		Assert.assertEquals(createNewInvoicePage.getStepInfo(), "2 - إضافة المنتجات");
+		createNewInvoicePage.CreateNewInvoiceStep2(product, category, productDescription, quantity, discount, VATCode);
+		
+		Assert.assertTrue(salesModule.getSuccessMsg().contains("تم إنشاء الفاتورة"));
+	}
+
+}

@@ -1,0 +1,12 @@
+package Pages;
+
+import org.openqa.selenium.WebDriver;
+
+public class CreateNewInvoicePage extends PageBase{
+	public CreateNewInvoicePage(WebDriver driver) {
+		super(driver);
+	}
+	
+	private By
+
+}

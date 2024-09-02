@@ -1,0 +1,24 @@
+package Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class CreateNewInvoicePage extends PageBase{
+	public CreateNewInvoicePage(WebDriver driver) {
+		super(driver);
+	}
+	
+	private By invoiceNumber_Input = By.name("invoice_number");
+	private By clientName_Input = By.xpath("//input[contains(@class,'mantine-Input-input')]");
+	private By invoiceDate_Input = By.xpath("(//button[contains(@class,'mantine-DatePickerInput-input')])[1]");
+	private By paymentDate_Input = By.xpath("(//button[contains(@class,'mantine-DatePickerInput-input')])[2]");
+	
+	public void CreateNewInvoiceStep1(String invoiceNo, String clientName, String invoiceDate_year, String invoiceDate_month, String invoiceDate_day) {
+		driver.findElement(invoiceNumber_Input).sendKeys(invoiceNo);
+		selectFromList(clientName_Input, clientName);
+		driver.findElement(invoiceDate_Input).click();
+		setDate(invoiceDate_year, invoiceDate_month, invoiceDate_day);
+		
+	}
+
+}

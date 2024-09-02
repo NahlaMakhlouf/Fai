@@ -1,0 +1,17 @@
+package Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class ImportInvoicesPage extends PageBase{
+	public ImportInvoicesPage(WebDriver driver) {
+		super(driver);
+	}
+	
+	private By upload_Btn= By.xpath("//input[@type='file']");
+	
+	public void importFile() {
+		String filePath = "./src/test/resources/fai_import-sales-template.xlsx" ;
+		driver.findElement(upload_Btn).sendKeys(filePath);	}
+
+}

@@ -1,0 +1,34 @@
+package Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+
+public class CreateNewVATReportPage extends PageBase{
+	public CreateNewVATReportPage(WebDriver driver) {
+		super(driver);
+	}
+	
+	private By step_No = By.xpath("//div[@class='stepsFelxContainer']/p");
+	private By ArName_Input = By.name("name.ar");
+	private By EnName_Input = By.name("name.en");
+	private By period_Input = By.xpath("(//input[contains(@class,'mantine-Input-input')])[1]");
+	private By menu_item = By.xpath("(//div[contains(@class, 'mantine-Select-item')])[1]");
+	private By year_Input = By.xpath("(//input[contains(@class,'mantine-Input-input')])[2]");
+	private By description_Input = By.name("description");
+	
+	public String getStepInfo() {
+		return driver.findElement(step_No).getText();
+	}
+	
+	public void createNewReportStep1 (String ArName, String EnName, String period, String year, String description) {
+		driver.findElement(ArName_Input).sendKeys(ArName);
+		driver.findElement(EnName_Input).sendKeys(EnName);
+		driver.findElement(period_Input).sendKeys(period);
+		driverWait.until(ExpectedConditions.visibilityOfElementLocated(menu_item)).click();
+		driver.findElement(year_Input).sendKeys(year);
+		driverWait.until(ExpectedConditions.visibilityOfElementLocated(menu_item)).click();
+		driver.findElement(description_Input).sendKeys(description);
+	}
+}

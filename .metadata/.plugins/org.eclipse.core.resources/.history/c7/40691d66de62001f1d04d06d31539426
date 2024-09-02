@@ -1,0 +1,60 @@
+package Pages;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class PageBase {
+	public WebDriver driver;
+	public Actions action;
+	public WebDriverWait driverWait;
+	public JavascriptExecutor js;
+
+	public PageBase(WebDriver driver) {
+		this.driver = driver;
+		this.js= (JavascriptExecutor)driver;
+
+		action = new Actions(driver);
+		driverWait = new WebDriverWait(driver, Duration.ofSeconds(240));
+	
+
+	}
+
+	private By calendarHeader = By.xpath("//button[contains(@class, 'mantine-CalendarHeader-calendarHeaderLevel')]");
+	private By loader = By.id("partiallyLoader");
+	private By pageTitle = By.xpath("(//div/p)[5]");
+
+	public void setDate(String year, String month, String day) {
+		driverWait.until(ExpectedConditions.elementToBeClickable(calendarHeader)).click();
+		driverWait.until(ExpectedConditions.elementToBeClickable(calendarHeader)).click();
+		driver.findElement(
+				By.xpath("//button[contains(@class, 'mantine-DatePickerInput-pickerControl')][text()='" + year + "'])"))
+				.click();
+		driver.findElement(By
+				.xpath("//button[contains(@class, 'mantine-DatePickerInput-pickerControl')][text()='" + month + "'])"))
+				.click();
+		driver.findElement(By.xpath("//button[contains(@class, 'mantine-DatePickerInput-day')][text()='" + day + "'])"))
+				.click();
+	}
+
+	public void handleLoaderDisplay() {
+		try {
+			if (driverWait.until(ExpectedConditions.visibilityOfElementLocated(loader)) != null) {
+				driverWait.until(ExpectedConditions.invisibilityOfElementLocated(loader));
+			}
+		} catch (Exception e) {
+
+		}
+	}
+	
+	public String getPageTitle() {
+		return driverWait.until(ExpectedConditions.visibilityOfElementLocated(pageTitle)).getText();
+		}
+
+
+}
