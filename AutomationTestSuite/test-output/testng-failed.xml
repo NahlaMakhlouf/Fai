@@ -6,7 +6,7 @@
       <class name="Tests.CreateNewReturnInvoiceTest">
         <methods>
           <include name="login"/>
-          <include name="createNewReturnSalesInvoice"/>
+          <include name="createNewReturnPurchaseInvoice" invocation-numbers="0"/>
           <include name="beforeClass"/>
           <include name="setUp"/>
         </methods>

@@ -44,14 +44,14 @@ public class CreateNewInvoiceTest extends TestBase {
 
 	@DataProvider
 	public static Object[][] getSalesInvoiceData() throws FileNotFoundException, IOException {
-		ExcelDataProvider.openExcel(".\\src\\test\\resources\\data.xlsx", "salesInvoices");
+		ExcelDataProvider.openExcel(".\\src\\test\\resources\\data.xlsx", "sales");
 		Object[][] data = ExcelDataProvider.getSheetData();
 		return data;
 	}
 	
 	@DataProvider
 	public static Object[][] getPurchasesInvoiceData() throws FileNotFoundException, IOException {
-		ExcelDataProvider.openExcel(".\\src\\test\\resources\\data.xlsx", "purchasesInvoices");
+		ExcelDataProvider.openExcel(".\\src\\test\\resources\\data.xlsx", "purchases");
 		Object[][] data = ExcelDataProvider.getSheetData();
 		return data;
 	}

@@ -1,0 +1,131 @@
+package Tests;
+
+import Pages.LoginPage;
+import Pages.DashboardPage;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import TestData.ExcelDataProvider;
+import Pages.CompanyDashboardPage;
+import Pages.SalesPage;
+import Pages.PurchasesPage;
+import Pages.CreateNewInvoicePage;
+import Pages.CreateNewReturnInvoicePage;
+
+public class CreateNewReturnInvoiceTest extends TestBase {
+	LoginPage loginPage;
+	DashboardPage dashboard;
+	CompanyDashboardPage companyDashboard;
+	SalesPage salesModule;
+	PurchasesPage purchasesModule;
+	CreateNewInvoicePage createNewInvoicePage;
+	CreateNewReturnInvoicePage createNewReturnIncoicePage;
+
+	@BeforeClass
+	public void beforeClass() {
+		loginPage = new LoginPage(driver);
+		dashboard = new DashboardPage(driver);
+		companyDashboard = new CompanyDashboardPage(driver);
+		salesModule = new SalesPage(driver);
+		purchasesModule = new PurchasesPage(driver);
+		createNewInvoicePage = new CreateNewInvoicePage(driver);
+		createNewReturnIncoicePage = new CreateNewReturnInvoicePage(driver);
+	}
+
+	@BeforeMethod
+	public void login() throws InterruptedException {
+		loginPage.login("nahlamakhlouf1@gmail.com", "123456");
+		dashboard.browseCompany("Automation");
+	}
+
+	@DataProvider
+	public static Object[][] getSalesReturnInvoiceData() throws FileNotFoundException, IOException {
+		ExcelDataProvider.openExcel(".\\src\\test\\resources\\data.xlsx", "salesReturn"); 
+		Object[][] data = ExcelDataProvider.getSheetData();
+		return data;
+	}
+	
+	@DataProvider
+	public static Object[][] getSalesReturnWithoutReferenceInvoiceData() throws FileNotFoundException, IOException {
+		ExcelDataProvider.openExcel(".\\src\\test\\resources\\data.xlsx", "salesReturnWithoutRef"); 
+		Object[][] data = ExcelDataProvider.getSheetData();
+		return data;
+	}
+	
+	@DataProvider
+	public static Object[][] getSalesCashbackInvoiceData() throws FileNotFoundException, IOException {
+		ExcelDataProvider.openExcel(".\\src\\test\\resources\\data.xlsx", "salesCashback"); 
+		Object[][] data = ExcelDataProvider.getSheetData();
+		return data;
+	}
+
+	@Test(dataProvider = "getSalesReturnInvoiceData", priority = 1)
+	public void createNewReturnSalesInvoice(String referenceInvoiceNumber, String returnInvoiceNumber,
+			String invoiceDate, String paymentDate, String invoiceNotes, String returnQuantity)
+			throws InterruptedException {
+		
+		companyDashboard.openModule("sales");
+		salesModule.openCreateReturnInvoicePage();
+		
+		Assert.assertEquals(createNewReturnIncoicePage.getStepInfo(), "1 - نوع الفواتير");
+		createNewReturnIncoicePage.CreateNewReturnInvoiceStep1();
+		
+		Assert.assertEquals(createNewReturnIncoicePage.getStepInfo(), "2 - فاتورة مرجعية");
+		createNewReturnIncoicePage.CreateNewReturnInvoiceStep2(referenceInvoiceNumber);
+		
+		Assert.assertEquals(createNewReturnIncoicePage.getStepInfo(), "3 - البيانات الأساسية");
+		createNewReturnIncoicePage.CreateNewReturnInvoiceStep3(returnInvoiceNumber, invoiceDate, paymentDate, invoiceNotes);
+		
+		Assert.assertEquals(createNewReturnIncoicePage.getStepInfo(), "4 - إضافة المرتجعات");
+		createNewReturnIncoicePage.CreateNewReturnInvoiceStep4(returnQuantity);
+		
+		Assert.assertTrue(salesModule.getSuccessMsg().contains("تم إنشاء الفاتورة"));
+	}
+
+	@Test(dataProvider = "getSalesReturnWithoutReferenceInvoiceData", priority = 2)
+	public void createNewReturnInvoiceWithoutReferenceInvoice(String invoiceNumber, String clientName, String invoiceDate,
+			String paymentDate, String invoiceNotes, String product, String category, String productDescription, String quantity,
+			String discount, String VATCode) throws InterruptedException {
+		
+		companyDashboard.openModule("sales");
+		salesModule.openCreateReturnInvoicePage();
+		
+		Assert.assertEquals(createNewReturnIncoicePage.getStepInfo(), "1 - نوع الفواتير");
+		createNewReturnIncoicePage.CreateNewReturnInvoiceWithReferenceInvoiceStep1();
+		
+		Assert.assertEquals(createNewReturnIncoicePage.getStepInfo(), "2 - البيانات الأساسية");
+		createNewReturnIncoicePage.CreateNewReturnInvoiceWithReferenceInvoiceStep2(invoiceNumber, clientName, invoiceDate, paymentDate, invoiceNotes);
+		
+		Assert.assertEquals(createNewReturnIncoicePage.getStepInfo(), "3 - إضافة المرتجعات");
+		createNewReturnIncoicePage.CreateNewReturnInvoiceWithReferenceInvoiceStep3(product, category, productDescription, quantity, discount, VATCode);
+		
+		Assert.assertTrue(salesModule.getSuccessMsg().contains("تم إنشاء الفاتورة"));
+	}
+	
+	@Test (dataProvider = "getSalesCashbackInvoiceData", priority = 3)
+	public void createNewCashbackSalesInvoice(String invoiceNumber, String clientName, String invoiceDate,
+			String paymentDate, String invoiceNotes, String productPrice, String VATCode) throws InterruptedException {
+		
+		companyDashboard.openModule("sales");
+		salesModule.openCreateReturnInvoicePage();
+		
+		Assert.assertEquals(createNewReturnIncoicePage.getStepInfo(), "1 - نوع الفواتير");
+		createNewReturnIncoicePage.CreateNewCashbackInvoiceStep1();
+
+		Assert.assertEquals(createNewReturnIncoicePage.getStepInfo(), "2 - البيانات الأساسية");
+		createNewReturnIncoicePage.CreateNewCashbackStep2(invoiceNumber, clientName, invoiceDate, paymentDate, invoiceNotes);
+		
+		Assert.assertEquals(createNewReturnIncoicePage.getStepInfo(), "3 - إضافة المرتجعات");
+		createNewReturnIncoicePage.CreateNewCashbackInvoiceStep3(productPrice, VATCode);
+		
+		Assert.assertTrue(salesModule.getSuccessMsg().contains("تم إنشاء الفاتورة"));		
+	}
+
+}

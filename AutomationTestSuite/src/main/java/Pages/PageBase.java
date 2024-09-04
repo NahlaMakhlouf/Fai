@@ -79,8 +79,11 @@ public class PageBase {
 	
 	public void selectFromList(By input, String value) throws InterruptedException {
 		driver.findElement(input).sendKeys(value);
-		Thread.sleep(1000);
-		driverWait.until(ExpectedConditions.visibilityOfElementLocated(menu_item)).click();
+		Thread.sleep(2000);
+		driverWait.until(ExpectedConditions.visibilityOfElementLocated(menu_item));
+		driver.findElement(menu_item).click();
+		
+		
 	}
 
 }
