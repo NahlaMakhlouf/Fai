@@ -98,10 +98,11 @@ public class CreateNewReturnInvoicePage extends CreateNewInvoicePage {
 	public void CreateNewCashbackInvoiceStep3(String price, String VATCode) throws InterruptedException {
 		driver.findElement(productPrice_Input).sendKeys(price);
 		driver.findElement(VATCode_Input).sendKeys(VATCode);
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		driverWait.until(ExpectedConditions.visibilityOfElementLocated(VATCode_Item));
 		driver.findElement(VATCode_Item).click();
 		handleLoaderDisplay();
+		Thread.sleep(3000);
 		driver.findElement(create_Btn).click();
 		handleLoaderDisplay();
 	}

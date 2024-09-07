@@ -1,0 +1,18 @@
+package Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class CreateNewClientPage extends PageBase {
+	public CreateNewClientPage(WebDriver driver) {
+		super(driver);
+	}
+	
+	private By shortName_Input= By.name("short_name");
+	
+	public void createNewClient(String shortName) {
+		driver.findElement(shortName_Input).sendKeys(shortName);
+		
+	}
+
+}
