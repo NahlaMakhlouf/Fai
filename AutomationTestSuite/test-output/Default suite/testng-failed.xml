@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Tests.CreateNewClientTest">
+      <class name="Tests.CreateNewReturnInvoiceTest">
         <methods>
-          <include name="createNewClient" invocation-numbers="0"/>
+          <include name="createNewPurchaseCashbackInvoice" invocation-numbers="0"/>
           <include name="login"/>
           <include name="beforeClass"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- Tests.CreateNewClientTest -->
+      </class> <!-- Tests.CreateNewReturnInvoiceTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

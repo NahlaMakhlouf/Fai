@@ -9,12 +9,13 @@ import org.testng.annotations.Test;
 import Pages.LoginPage;
 import Pages.DashboardPage;
 import Pages.CompanyDashboardPage;
-
+import Pages.CreateNewCompanyPage;
 public class DashboardTest extends TestBase{
 	
 	LoginPage loginPage;
 	DashboardPage dashboard;
 	CompanyDashboardPage companyDashboard;
+	CreateNewCompanyPage createNewCompanyPage;
 	
 
 	@BeforeClass
@@ -22,6 +23,7 @@ public class DashboardTest extends TestBase{
 		loginPage = new LoginPage(driver);
 		dashboard = new DashboardPage(driver);
 		companyDashboard = new CompanyDashboardPage(driver);
+		createNewCompanyPage = new CreateNewCompanyPage(driver);
 
 	}
 	@BeforeMethod
@@ -32,6 +34,12 @@ public class DashboardTest extends TestBase{
 	public void goToCompanyDashboardAndAssertCompanyNameIsDisplayed() {
 		dashboard.browseCompany("Automation");
 		Assert.assertTrue(companyDashboard.isCompanyNameDisplayed("Automation"));
+	}
+	
+	@Test 
+	public void openCreateNewCompanyPage() {
+		dashboard.openCreateNewCompanyPage();
+		Assert.assertEquals(createNewCompanyPage.getPageTitle(), "انشاء كيان جديد");
 	}
 }
 

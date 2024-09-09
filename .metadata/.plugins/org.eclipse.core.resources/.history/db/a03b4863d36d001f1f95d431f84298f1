@@ -1,0 +1,35 @@
+package Tests;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import Pages.LoginPage;
+import Pages.DashboardPage;
+import Pages.CreateNewCompanyPage;
+
+
+public class CreateNewCompanyTest extends TestBase{
+	LoginPage loginPage;
+	DashboardPage dashboard;
+	CreateNewCompanyPage createNewCompanyPage;
+	
+	@BeforeClass
+	public void beforeClass() {
+		loginPage = new LoginPage(driver);
+		dashboard = new DashboardPage(driver);
+		createNewCompanyPage = new CreateNewCompanyPage(driver);
+
+	}
+
+	@BeforeMethod
+	public void login() throws InterruptedException {
+		loginPage.login("nahlamakhlouf1@gmail.com", "123456");
+		dashboard.openCreateNewCompanyPage();
+	}
+	@Test
+	public void createNewCompany() {
+		createNewCompanyPage.CreateNewCompany();
+	}
+
+}

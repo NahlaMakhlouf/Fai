@@ -22,7 +22,7 @@ public class CreateNewClientPage extends PageBase {
 	private By commercialRegistrationNumber_Input = By.name("registration_number");
 	private By unifiedNumber_Input = By.name("id_number");
 	private By website_Inout = By.name("website");
-	private By taxRegistered_CheckBox = By.name("tax_registered");
+	private By vatRegistered_CheckBox = By.name("tax_registered");
 	private By vatRegistrationNumber_Input = By.name("tax_number");
 	private By uploadAttachment_Btn = By.xpath("(//input[@type='file'])[2]");
 	private By country_Input = By.xpath("(//input[contains(@class,'mantine-Input-input')])[4]");
@@ -62,7 +62,7 @@ public class CreateNewClientPage extends PageBase {
 		driver.findElement(commercialRegistrationNumber_Input).sendKeys(commercialRegistartionNo);
 		driver.findElement(unifiedNumber_Input).sendKeys(unifiedNo);
 		driver.findElement(website_Inout).sendKeys(website);
-		driver.findElement(taxRegistered_CheckBox).click();
+		driver.findElement(vatRegistered_CheckBox).click();
 		driver.findElement(vatRegistrationNumber_Input).sendKeys(vatRegistrationNo);
 		String filePath = Paths.get("src/test/resources/attachment.pdf").toAbsolutePath().toString();
 		driver.findElement(uploadAttachment_Btn).sendKeys(filePath);

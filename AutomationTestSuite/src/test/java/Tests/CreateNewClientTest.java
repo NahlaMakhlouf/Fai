@@ -1,24 +1,23 @@
 package Tests;
 
-import Pages.LoginPage;
 import TestData.ExcelDataProvider;
+import Pages.LoginPage;
 import Pages.DashboardPage;
 import Pages.CompanyDashboardPage;
-
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import Pages.ClientsPage;
+import Pages.CreateNewClientPage;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.testng.Assert;
+import static org.testng.Assert.assertTrue;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import Pages.ClientsPage;
-import Pages.CreateNewClientPage;
 
 public class CreateNewClientTest extends TestBase {
 	LoginPage loginPage;

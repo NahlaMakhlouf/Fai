@@ -1,0 +1,18 @@
+package Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+public class CreateNewCompanyPage extends PageBase{
+	public CreateNewCompanyPage(WebDriver driver) {
+		super(driver);
+	}
+	
+	private By pageTitle= By.xpath("//div[@class='title']/p");
+	
+	public String getPageTitle() {
+		return driverWait.until(ExpectedConditions.visibilityOfElementLocated(pageTitle)).getText();
+		}
+
+}

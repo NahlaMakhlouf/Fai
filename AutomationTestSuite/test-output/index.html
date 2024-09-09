@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\lenovo\AppData\Local\Temp\testng-eclipse--793535409\testng-customsuite.xml</span>
+                    <span>C:\Users\lenovo\AppData\Local\Temp\testng-eclipse-2011056919\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Tests.CreateNewClientTest" class="method navigator-link" hash-for-method="createNewClient(Both, منة الله عماد, Menna Emad, حساب, كلاهما, مؤسسة, 1111122222, 2147483647, https://fai-wp.ahadtes...)">createNewClient(Both, منة الله عماد, Menna Emad, حساب, كلاهما, مؤسسة, 1111122222, 2147483647, https://fai-wp.ahadtes...)</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Tests.CreateNewReturnInvoiceTest" class="method navigator-link" hash-for-method="createNewPurchaseCashbackInvoice(p_Cashback001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, 1000, SA_PU_S050-مرتجع)">createNewPurchaseCashbackInvoice(p_Cashback001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, 1000, SA_PU_S050-مرتجع)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,26 +118,66 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Tests.CreateNewClientTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">Tests.CreateNewReturnInvoiceTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createNewClient(Both, منة الله عماد, Menna Emad, حساب, كلاهما, مؤسسة, 1111122222, 2147483647, https://fai-wp.ahadtes...)">
-                  </a> <!-- createNewClient(Both, منة الله عماد, Menna Emad, حساب, كلاهما, مؤسسة, 1111122222, 2147483647, https://fai-wp.ahadtes...) -->
-                  <span class="method-name">createNewClient</span>
-                  <span class="parameters">(Both,منة الله عماد,Menna Emad,حساب,كلاهما,مؤسسة,1111122222,2147483647,https://fai-wp.ahadtest.com,123451234512345,مصر,الإسكندرية,سموحه,123,12345,سموحه,smouha,0559505553,menna@fai.ws,ماريو نادى,MarioNady,مدير منتج,product manager,mario@fai.ws,مُعتَمَد,0559505554)</span>
+                  <a name="createNewPurchaseCashbackInvoice(p_Cashback001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, 1000, SA_PU_S050-مرتجع)">
+                  </a> <!-- createNewPurchaseCashbackInvoice(p_Cashback001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, 1000, SA_PU_S050-مرتجع) -->
+                  <span class="method-name">createNewPurchaseCashbackInvoice</span>
+                  <span class="parameters">(p_Cashback001,Nahla,Aug 01 2024,Aug 02 2024,test invoice notes,1000,SA_PU_S050-مرتجع)</span>
+                  <div class="stack-trace">java.lang.IllegalArgumentException: Argument is of an illegal type: org.openqa.selenium.By$ByXPath
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:82)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:465)
+	at Pages.CreateNewReturnInvoicePage.CreateNewCashbackInvoiceStep3(CreateNewReturnInvoicePage.java:105)
+	at Tests.CreateNewReturnInvoiceTest.createNewPurchaseCashbackInvoice(CreateNewReturnInvoiceTest.java:209)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-failed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\lenovo\AppData\Local\Temp\testng-eclipse--793535409\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\lenovo\AppData\Local\Temp\testng-eclipse-2011056919\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -146,11 +186,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Tests.CreateNewClientTest&quot;&gt;
+      &lt;class name=&quot;Tests.CreateNewReturnInvoiceTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;createNewClient&quot;/&gt;
+          &lt;include name=&quot;createNewPurchaseCashbackInvoice&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- Tests.CreateNewClientTest --&gt;
+      &lt;/class&gt; &lt;!-- Tests.CreateNewReturnInvoiceTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -192,14 +232,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createNewClient')
-data.setCell(0, 2, 'Tests.CreateNewClientTest')
-data.setCell(0, 3, 30980);
+data.setCell(0, 1, 'createNewPurchaseCashbackInvoice')
+data.setCell(0, 2, 'Tests.CreateNewReturnInvoiceTest')
+data.setCell(0, 3, 501770);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 30 seconds</span>
+              <span class="suite-total-time">Total running time: 8 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -214,9 +254,24 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">5 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">Tests.CreateNewReturnInvoiceTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">createNewCashbackSalesInvoice</span>
+                <br/>
+                <span class="ignored-method-name">createNewPurchaseReturnInvoiceWithoutReferenceInvoice</span>
+                <br/>
+                <span class="ignored-method-name">createNewReturnPurchaseInvoice</span>
+                <br/>
+                <span class="ignored-method-name">createNewSalesReturnInvoiceWithoutReferenceInvoice</span>
+                <br/>
+                <span class="ignored-method-name">createNewReturnSalesInvoice</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -225,22 +280,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Tests.CreateNewClientTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Tests.CreateNewReturnInvoiceTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">2833 ms</span>
+                <span class="method-start">3149 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">login</span>
-                <span class="method-start">3784 ms</span>
+                <span class="method-start">3969 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">createNewClient(Both, منة الله عماد, Menna Emad, حساب, كلاهما, مؤسسة, 1111122222, 2147483647, https://fai-wp.ahadtes...)</span>
-                <span class="method-start">13623 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">createNewPurchaseCashbackInvoice(p_Cashback001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, 1000, SA_PU_S050-مرتجع)</span>
+                <span class="method-start">10230 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

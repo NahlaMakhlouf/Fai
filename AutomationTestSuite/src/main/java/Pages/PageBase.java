@@ -8,6 +8,7 @@ import java.util.Locale;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -24,7 +25,7 @@ public class PageBase {
 		this.js= (JavascriptExecutor)driver;
 
 		action = new Actions(driver);
-		driverWait = new WebDriverWait(driver, Duration.ofSeconds(240));
+		driverWait = new WebDriverWait(driver, Duration.ofSeconds(480));
 	
 
 	}
@@ -78,12 +79,11 @@ public class PageBase {
 		}
 	
 	public void selectFromList(By input, String value) throws InterruptedException {
+		
 		driver.findElement(input).sendKeys(value);
 		Thread.sleep(2000);
 		driverWait.until(ExpectedConditions.visibilityOfElementLocated(menu_item));
-		driver.findElement(menu_item).click();
-		
-		
-	}
+		driver.findElement(menu_item).click();		
+		}
 
 }

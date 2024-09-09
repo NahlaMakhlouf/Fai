@@ -194,7 +194,7 @@ public class CreateNewReturnInvoiceTest extends TestBase {
 	
 	@Test (dataProvider = "getPurchasesCashbackInvoiceData", priority = 6)
 	public void createNewPurchaseCashbackInvoice(String invoiceNumber, String clientName, String invoiceDate,
-			String paymentDate, String invoiceNotes, String productPrice, String VATCode) throws InterruptedException {
+			String paymentDate, String invoiceNotes, String productPrice, String vatCode) throws InterruptedException {
 		
 		companyDashboard.openModule("purchases");
 		purchasesModule.openCreateReturnInvoicePage();
@@ -206,7 +206,7 @@ public class CreateNewReturnInvoiceTest extends TestBase {
 		createNewReturnIncoicePage.CreateNewCashbackStep2(invoiceNumber, clientName, invoiceDate, paymentDate, invoiceNotes);
 		
 		Assert.assertEquals(createNewReturnIncoicePage.getStepInfo(), "3 - إضافة المرتجعات");
-		createNewReturnIncoicePage.CreateNewCashbackInvoiceStep3(productPrice, VATCode);
+		createNewReturnIncoicePage.CreateNewCashbackInvoiceStep3(productPrice, vatCode);
 		
 		//Assert.assertTrue(salesModule.getSuccessMsg().contains("تم إنشاء الفاتورة"));		
 	}
