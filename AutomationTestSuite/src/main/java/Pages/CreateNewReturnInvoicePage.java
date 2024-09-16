@@ -29,7 +29,7 @@ public class CreateNewReturnInvoicePage extends CreateNewInvoicePage {
 
 	private By next_Btn = By.xpath("//button[@type='submit']");
 	private By addToList_Btn = By.xpath("//button[@type='submit']");
-	private By create_Btn = By.xpath("(//button[@type='button'])[6]");
+	private By create_Btn = By.xpath("//button[@class='sc-eCstZk cjwIVv']");
 
 
 	public void CreateNewReturnInvoiceStep1() {
@@ -97,12 +97,14 @@ public class CreateNewReturnInvoicePage extends CreateNewInvoicePage {
 
 	public void CreateNewCashbackInvoiceStep3(String price, String VATCode) throws InterruptedException {
 		driver.findElement(productPrice_Input).sendKeys(price);
+		
 		driver.findElement(VATCode_Input).sendKeys(VATCode);
-		driverWait.until(ExpectedConditions.visibilityOfElementLocated(VATCode_Item));
-		driver.findElement(VATCode_Item).click();
 		handleLoaderDisplay();
-		driverWait.until(ExpectedConditions.elementToBeClickable(create_Btn));
-		js.executeScript("arguments[0].click();", create_Btn);
+		driverWait.until(ExpectedConditions.visibilityOfElementLocated(VATCode_Item)).click();
+		handleLoaderDisplay();
+		
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//button[@class='sc-eCstZk cjwIVv']")));
+		System.out.println("button clicked");
 		handleLoaderDisplay();
 	}
 

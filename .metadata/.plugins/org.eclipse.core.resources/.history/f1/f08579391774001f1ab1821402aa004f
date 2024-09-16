@@ -1,0 +1,20 @@
+package Pages;
+
+import java.nio.file.Paths;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class CreateNewProductPage extends PageBase{
+	public CreateNewProductPage(WebDriver driver) {
+		super(driver);
+	}
+	
+	private By uploadLogo_Btn = By.xpath("//input[@type='file']");
+	
+	public void createNewProduct() {
+		String imagePath = Paths.get("src/test/resources/product.png").toAbsolutePath().toString();
+		driver.findElement(uploadLogo_Btn).sendKeys(imagePath);
+	}
+
+}

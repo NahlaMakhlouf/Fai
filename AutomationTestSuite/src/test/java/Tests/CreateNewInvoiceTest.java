@@ -85,8 +85,6 @@ public class CreateNewInvoiceTest extends TestBase {
 		Assert.assertEquals(createNewInvoicePage.getStepInfo(), "2 - إضافة المنتجات");
 		createNewInvoicePage.CreateNewInvoiceStep2(product, category, productDescription, quantity, discount, VATCode);
 		
-		System.out.println(purchasesModule.getSuccessMsg());
-		
 		Assert.assertTrue(purchasesModule.getSuccessMsg().contains("تم إنشاء الفاتورة"));
 	}
 

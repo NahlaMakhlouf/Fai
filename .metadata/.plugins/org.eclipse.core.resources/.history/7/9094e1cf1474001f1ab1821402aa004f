@@ -1,0 +1,10 @@
+package Pages;
+
+import org.openqa.selenium.WebDriver;
+
+public class CreateNewProductPage extends PageBase{
+	public CreateNewProductPage(WebDriver driver) {
+		super(driver);
+	}
+
+}

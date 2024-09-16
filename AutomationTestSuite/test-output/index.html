@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\lenovo\AppData\Local\Temp\testng-eclipse-2011056919\testng-customsuite.xml</span>
+                    <span>C:\Users\lenovo\AppData\Local\Temp\testng-eclipse--1170950648\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Tests.CreateNewReturnInvoiceTest" class="method navigator-link" hash-for-method="createNewPurchaseCashbackInvoice(p_Cashback001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, 1000, SA_PU_S050-مرتجع)">createNewPurchaseCashbackInvoice(p_Cashback001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, 1000, SA_PU_S050-مرتجع)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Tests.CreateNewProductTest" class="method navigator-link" hash-for-method="createNewProduct(منتج, product, وصف المنتج, product description, كلاهما, 1000, Auto)">createNewProduct(منتج, product, وصف المنتج, product description, كلاهما, 1000, Auto)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -121,27 +121,40 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">Tests.CreateNewReturnInvoiceTest</span>
+              <span class="class-name">Tests.CreateNewProductTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createNewPurchaseCashbackInvoice(p_Cashback001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, 1000, SA_PU_S050-مرتجع)">
-                  </a> <!-- createNewPurchaseCashbackInvoice(p_Cashback001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, 1000, SA_PU_S050-مرتجع) -->
-                  <span class="method-name">createNewPurchaseCashbackInvoice</span>
-                  <span class="parameters">(p_Cashback001,Nahla,Aug 01 2024,Aug 02 2024,test invoice notes,1000,SA_PU_S050-مرتجع)</span>
-                  <div class="stack-trace">java.lang.IllegalArgumentException: Argument is of an illegal type: org.openqa.selenium.By$ByXPath
-	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:82)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:465)
-	at Pages.CreateNewReturnInvoicePage.CreateNewCashbackInvoiceStep3(CreateNewReturnInvoicePage.java:105)
-	at Tests.CreateNewReturnInvoiceTest.createNewPurchaseCashbackInvoice(CreateNewReturnInvoiceTest.java:209)
+                  <a name="createNewProduct(منتج, product, وصف المنتج, product description, كلاهما, 1000, Auto)">
+                  </a> <!-- createNewProduct(منتج, product, وصف المنتج, product description, كلاهما, 1000, Auto) -->
+                  <span class="method-name">createNewProduct</span>
+                  <span class="parameters">(منتج,product,وصف المنتج,product description,كلاهما,1000,Auto)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class, &apos;Toastify__toast&apos;)]/div&quot;}
+  (Session info: chrome=128.0.6613.120)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.14.1&apos;, revision: &apos;03f8ede370&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e221ede8031df2132ad5699eba506618, findElement {using=xpath, value=//div[contains(@class, &apos;Toastify__toast&apos;)]/div}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.120, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55649}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55649/devtoo..., se:cdpVersion: 128.0.6613.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e221ede8031df2132ad5699eba506618
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at Pages.PageBase.getSuccessMsg(PageBase.java:78)
+	at Tests.CreateNewProductTest.createNewProduct(CreateNewProductTest.java:54)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -177,7 +190,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\lenovo\AppData\Local\Temp\testng-eclipse-2011056919\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\lenovo\AppData\Local\Temp\testng-eclipse--1170950648\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -186,11 +199,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Tests.CreateNewReturnInvoiceTest&quot;&gt;
+      &lt;class name=&quot;Tests.CreateNewProductTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;createNewPurchaseCashbackInvoice&quot;/&gt;
+          &lt;include name=&quot;createNewProduct&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- Tests.CreateNewReturnInvoiceTest --&gt;
+      &lt;/class&gt; &lt;!-- Tests.CreateNewProductTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -232,14 +245,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createNewPurchaseCashbackInvoice')
-data.setCell(0, 2, 'Tests.CreateNewReturnInvoiceTest')
-data.setCell(0, 3, 501770);
+data.setCell(0, 1, 'createNewProduct')
+data.setCell(0, 2, 'Tests.CreateNewProductTest')
+data.setCell(0, 3, 3737);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 minutes</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -254,24 +267,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">5 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">Tests.CreateNewReturnInvoiceTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">createNewCashbackSalesInvoice</span>
-                <br/>
-                <span class="ignored-method-name">createNewPurchaseReturnInvoiceWithoutReferenceInvoice</span>
-                <br/>
-                <span class="ignored-method-name">createNewReturnPurchaseInvoice</span>
-                <br/>
-                <span class="ignored-method-name">createNewSalesReturnInvoiceWithoutReferenceInvoice</span>
-                <br/>
-                <span class="ignored-method-name">createNewReturnSalesInvoice</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -280,24 +278,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Tests.CreateNewReturnInvoiceTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Tests.CreateNewProductTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">3149 ms</span>
+                <span class="method-start">22002 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">login</span>
-                <span class="method-start">3969 ms</span>
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">24790 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">createNewPurchaseCashbackInvoice(p_Cashback001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, 1000, SA_PU_S050-مرتجع)</span>
-                <span class="method-start">10230 ms</span>
+                <span class="method-name">createNewProduct(منتج, product, وصف المنتج, product description, كلاهما, 1000, Auto)</span>
+                <span class="method-start">54181 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

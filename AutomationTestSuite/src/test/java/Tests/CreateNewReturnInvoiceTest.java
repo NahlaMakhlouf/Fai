@@ -206,7 +206,7 @@ public class CreateNewReturnInvoiceTest extends TestBase {
 		createNewReturnIncoicePage.CreateNewCashbackStep2(invoiceNumber, clientName, invoiceDate, paymentDate, invoiceNotes);
 		
 		Assert.assertEquals(createNewReturnIncoicePage.getStepInfo(), "3 - إضافة المرتجعات");
-		createNewReturnIncoicePage.CreateNewCashbackInvoiceStep3(productPrice, vatCode);
+		createNewReturnIncoicePage.CreateNewCashbackInvoiceStep3( productPrice, vatCode);
 		
 		//Assert.assertTrue(salesModule.getSuccessMsg().contains("تم إنشاء الفاتورة"));		
 	}
