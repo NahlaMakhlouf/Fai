@@ -18,6 +18,7 @@ public class CreateNewClientPage extends PageBase {
 	private By accountType_Input = By.xpath("(//input[contains(@class,'mantine-Input-input')])[1]");
 	private By relationshipType_Input = By.xpath("(//input[contains(@class,'mantine-Input-input')])[2]");
 	private By corporateType_Input = By.xpath("(//input[contains(@class,'mantine-Input-input')])[3]");
+	private By menu_item = By.xpath("(//div[contains(@class, 'mantine-Select-item')])[1]");
 	private By uploadLogo_Btn = By.xpath("//input[@type='file']");
 	private By commercialRegistrationNumber_Input = By.name("registration_number");
 	private By unifiedNumber_Input = By.name("id_number");
@@ -54,9 +55,9 @@ public class CreateNewClientPage extends PageBase {
 		driver.findElement(shortName_Input).sendKeys(shortName);
 		driver.findElement(ArName_Input).sendKeys(ArName);
 		driver.findElement(EnName_Input).sendKeys(EnName);
-		selectFromList(accountType_Input, accountType);
-		selectFromList(relationshipType_Input, relationshipType);
-		selectFromList(corporateType_Input, corporateType);
+		selectFromList(accountType_Input, accountType, menu_item);
+		selectFromList(relationshipType_Input, relationshipType, menu_item);
+		selectFromList(corporateType_Input, corporateType, menu_item);
 		String imagePath = Paths.get("src/test/resources/logo.jpg").toAbsolutePath().toString();
 		driver.findElement(uploadLogo_Btn).sendKeys(imagePath);
 		driver.findElement(commercialRegistrationNumber_Input).sendKeys(commercialRegistartionNo);
@@ -66,8 +67,8 @@ public class CreateNewClientPage extends PageBase {
 		driver.findElement(vatRegistrationNumber_Input).sendKeys(vatRegistrationNo);
 		String filePath = Paths.get("src/test/resources/attachment.pdf").toAbsolutePath().toString();
 		driver.findElement(uploadAttachment_Btn).sendKeys(filePath);
-		selectFromList(country_Input, country);
-		selectFromList(city_Input, city);
+		selectFromList(country_Input, country, menu_item);
+		selectFromList(city_Input, city, menu_item);
 		driver.findElement(district_Input).sendKeys(district);
 		driver.findElement(zipCode_Input).sendKeys(zip);
 		driver.findElement(referenceNumber_Input).sendKeys(referenceNo);
@@ -85,7 +86,7 @@ public class CreateNewClientPage extends PageBase {
 		driver.findElement(ArTitle_Input).sendKeys(ArTitle);
 		driver.findElement(EnTitle_Input).sendKeys(EnTitle);
 		driver.findElement(email_Input).sendKeys(email);
-		selectFromList(status_Input, status);
+		selectFromList(status_Input, status, menu_item);
 		driver.findElement(phoneNumber_Input).sendKeys(phone);
 		driver.findElement(addToList_Btn).click();
 		driverWait.until(ExpectedConditions.elementToBeClickable(create_Btn)).click();

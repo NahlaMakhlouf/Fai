@@ -2,24 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-16T13:51:47 EEST" name="Default suite" finished-at="2024-09-16T13:53:58 EEST" duration-ms="130540">
+  <suite started-at="2024-11-11T15:17:23 EET" name="Default suite" finished-at="2024-11-11T15:17:56 EET" duration-ms="32946">
     <groups>
     </groups>
-    <test started-at="2024-09-16T13:51:47 EEST" name="Default test" finished-at="2024-09-16T13:53:58 EEST" duration-ms="130540">
+    <test started-at="2024-11-11T15:17:23 EET" name="Default test" finished-at="2024-11-11T15:17:56 EET" duration-ms="32946">
       <class name="Tests.CreateNewReturnInvoiceTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.CreateNewReturnInvoiceTest@4082ba93]" started-at="2024-09-16T13:51:43 EEST" name="setUp" finished-at="2024-09-16T13:51:47 EEST" duration-ms="4385" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.CreateNewReturnInvoiceTest@305ffe9e]" started-at="2024-11-11T15:17:23 EET" name="setUp" finished-at="2024-11-11T15:17:30 EET" duration-ms="7157" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Tests.CreateNewReturnInvoiceTest@4082ba93]" started-at="2024-09-16T13:51:47 EEST" name="beforeClass" finished-at="2024-09-16T13:51:48 EEST" duration-ms="133" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Tests.CreateNewReturnInvoiceTest@305ffe9e]" started-at="2024-11-11T15:17:30 EET" name="beforeClass" finished-at="2024-11-11T15:17:35 EET" duration-ms="5122" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="login()[pri:0, instance:Tests.CreateNewReturnInvoiceTest@4082ba93]" started-at="2024-09-16T13:51:51 EEST" name="login" finished-at="2024-09-16T13:51:57 EEST" duration-ms="6251" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="createNewPurchaseCashbackInvoice(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:Tests.CreateNewReturnInvoiceTest@4082ba93]" started-at="2024-09-16T13:51:57 EEST" name="createNewPurchaseCashbackInvoice" data-provider="getPurchasesCashbackInvoiceData" finished-at="2024-09-16T13:53:58 EEST" duration-ms="120871" status="PASS">
+        <test-method signature="createNewPurchaseCashbackInvoice(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:Tests.CreateNewReturnInvoiceTest@305ffe9e]" started-at="2024-11-11T15:17:37 EET" name="createNewPurchaseCashbackInvoice" data-provider="getPurchasesCashbackInvoiceData" finished-at="2024-11-11T15:17:56 EET" duration-ms="19262" status="PASS">
           <params>
             <param index="0">
               <value>

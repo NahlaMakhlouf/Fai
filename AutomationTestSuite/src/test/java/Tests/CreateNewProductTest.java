@@ -24,20 +24,23 @@ public class CreateNewProductTest extends TestBase{
 	CreateNewProductPage createNewProductPage;
 	
 	@BeforeClass
-	public void beforeClass() {
+	public void beforeClass() throws InterruptedException {
 		loginPage = new LoginPage(driver);
 		dashboard = new DashboardPage(driver);
 		companyDashboard = new CompanyDashboardPage(driver);
 		productsModule = new ProductsPage(driver);
 		createNewProductPage = new CreateNewProductPage(driver);
-	}
-	@BeforeMethod
-	public void beforeMethod() throws InterruptedException {
 		loginPage.login("nahlamakhlouf1@gmail.com", "123456");
 		dashboard.browseCompany("Automation");
 		companyDashboard.openModule("products");
+	}
+	@BeforeMethod
+	public void beforeMethod() throws InterruptedException {
+		
+		
 		productsModule.openCreateNewProductPage();
 	}
+
 	
 	@DataProvider
 	public static Object[][] getProductData() throws FileNotFoundException, IOException {

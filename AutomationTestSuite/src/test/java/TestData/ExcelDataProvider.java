@@ -36,13 +36,7 @@ public class ExcelDataProvider {
 
 	}
 
-	public static int OpenExcelFileAndGetRowCount(String path, String sheetName) throws IOException {
-		FileInputStream excelSheet = new FileInputStream(path);
-		workbook = new XSSFWorkbook(excelSheet);
-		sheet = workbook.getSheet(sheetName);
-		return sheet.getLastRowNum();
-	}
-
+	// Get data from the sheet
 	public static Object[][] getSheetData() {
 
 		int rows = getRowCount();
@@ -51,8 +45,11 @@ public class ExcelDataProvider {
 		Object[][] data = new Object[rows][cols];
 
 		for (int i = 0; i < rows; i++) {
+			
 			XSSFRow row = sheet.getRow(i + 1);
+			
 			for (int j = 0; j < cols; j++) {
+				
 				cell = row.getCell(j);
 
 				if (cell.getCellType().equals(CellType.STRING)) {

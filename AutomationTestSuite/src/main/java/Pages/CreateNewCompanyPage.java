@@ -15,6 +15,7 @@ public class CreateNewCompanyPage extends PageBase {
 	private By uploadLogo_Btn = By.xpath("//input[@type='file']");
 	private By companyShortName_Input = By.name("slug");
 	private By companyType_Input = By.xpath("//input[contains(@class,'mantine-Input-input')]");
+	private By menu_item = By.xpath("(//div[contains(@class, 'mantine-Select-item')])[1]");
 	private By vatRegistered_CheckBox = By.name("invoice_number_method");
 	private By next_Btn = By.xpath("//button[@type='submit']");
 
@@ -47,7 +48,7 @@ public class CreateNewCompanyPage extends PageBase {
 		String imagePath = Paths.get("src/test/resources/companyLogo.png").toAbsolutePath().toString();
 		driver.findElement(uploadLogo_Btn).sendKeys(imagePath);
 		driver.findElement(companyShortName_Input).sendKeys(shortName);
-		selectFromList(companyType_Input, compayType);
+		selectFromList(companyType_Input, compayType, menu_item);
 		driver.findElement(vatRegistered_CheckBox).click();
 		driverWait.until(ExpectedConditions.elementToBeClickable(next_Btn)).click();
 		handleLoaderDisplay();
@@ -57,14 +58,14 @@ public class CreateNewCompanyPage extends PageBase {
 			String vatRegistrationNo, String effectiveVATRegistrationDate, String reportType) throws InterruptedException {
 		String filePath = Paths.get("src/test/resources/attachment.pdf").toAbsolutePath().toString();
 		
-		selectFromList(organizationType_Input, organizationType);
+		selectFromList(organizationType_Input, organizationType, menu_item);
 		driver.findElement(unifiedNumber_Input).sendKeys(unifiedNo);
 		driver.findElement(commercialRegistrationNumber_Input).sendKeys(commercialRegistrationNo);
 		driver.findElement(taxNumber_Input).sendKeys(taxNo);
 		driver.findElement(uploadCommercialRegistrationCertificate_Btn).sendKeys(filePath);
 		driver.findElement(vatRegistrtaionNumber_Input).sendKeys(vatRegistrationNo);
 		setDate(effectiveVATRegistrationDate_Input, effectiveVATRegistrationDate);
-		selectFromList(reportType_Input, reportType);
+		selectFromList(reportType_Input, reportType, menu_item);
 		driver.findElement(uploadVATRegistrationCertificate_Btn).sendKeys(filePath);
 		driverWait.until(ExpectedConditions.elementToBeClickable(next_Btn)).click();
 		handleLoaderDisplay();		

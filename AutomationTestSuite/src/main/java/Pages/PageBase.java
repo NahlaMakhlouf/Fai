@@ -8,6 +8,8 @@ import java.util.Locale;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -21,69 +23,78 @@ public class PageBase {
 
 	public PageBase(WebDriver driver) {
 		this.driver = driver;
-		this.js= (JavascriptExecutor)driver;
+		this.js = (JavascriptExecutor) driver;
 
 		action = new Actions(driver);
 		driverWait = new WebDriverWait(driver, Duration.ofSeconds(480));
-	
 
 	}
 
 	private By calendarHeader = By.xpath("//button[contains(@class, 'mantine-CalendarHeader-calendarHeaderLevel')]");
 	private By loader = By.id("partiallyLoader");
 	private By pageTitle = By.xpath("(//div/p)[5]");
-	private By success_Msg = By.xpath("//div[contains(@class, 'Toastify__toast')]/div");
-	private By menu_item = By.xpath("(//div[contains(@class, 'mantine-Select-item')])[1]");
+	private By success_Msg = By.cssSelector("div[class*='Toastify__toast'] > div");
 
 	public void setDate(By dateFeild, String dateValue) {
-		
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM dd yyyy");
-        	LocalDate date = LocalDate.parse(dateValue, formatter);
-        
-        
-        String year = String.valueOf(date.getYear());
-        String month = date.getMonth().getDisplayName(TextStyle.SHORT, Locale.ENGLISH);
-        String day = String.valueOf(date.getDayOfMonth());
-        
+
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM dd yyyy");
+		LocalDate date = LocalDate.parse(dateValue, formatter);
+
+		String year = String.valueOf(date.getYear());
+		String month = date.getMonth().getDisplayName(TextStyle.SHORT, Locale.ENGLISH);
+		String day = String.valueOf(date.getDayOfMonth());
+
 		driver.findElement(dateFeild).click();
-		
+
 		driverWait.until(ExpectedConditions.elementToBeClickable(calendarHeader)).click();
 		driverWait.until(ExpectedConditions.elementToBeClickable(calendarHeader)).click();
-		driver.findElement(
-				By.xpath("//button[contains(@class, 'mantine-DatePickerInput-pickerControl')and text()='" + year + "']"))
-				.click();
 		driver.findElement(By
-				.xpath("//button[contains(@class, 'mantine-DatePickerInput-pickerControl') and text()='" + month + "']"))
+				.xpath("//button[contains(@class, 'mantine-DatePickerInput-pickerControl')and text()='" + year + "']"))
 				.click();
-		driver.findElement(By.xpath("//button[contains(@class, 'mantine-DatePickerInput-day') and text()='" + day + "']"))
+		driver.findElement(By.xpath(
+				"//button[contains(@class, 'mantine-DatePickerInput-pickerControl') and text()='" + month + "']"))
 				.click();
+		driver.findElement(
+				By.xpath("//button[contains(@class, 'mantine-DatePickerInput-day') and text()='" + day + "']")).click();
 	}
 
+	private boolean isLoaderDisplayed() {
+		try {
+			return driver.findElement(loader).isDisplayed();
+		} 
+		catch (NoSuchElementException e) {
+			return false;
+		}
+	}
 	public void handleLoaderDisplay() {
 		try {
-			if (driverWait.until(ExpectedConditions.visibilityOfElementLocated(loader)) != null) {
+			if (isLoaderDisplayed()) {
 				driverWait.until(ExpectedConditions.invisibilityOfElementLocated(loader));
 			}
+		} catch (TimeoutException e) {
+			System.out.println("Loader did not disappear in time or wasn't present: " + e.getMessage());
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
-
+			System.out.println("Unexpected error while handling loader: " + e.getMessage());
 		}
 	}
-	
+
 	public String getPageTitle() {
 		return driverWait.until(ExpectedConditions.visibilityOfElementLocated(pageTitle)).getText();
-		}
-	
-	public String getSuccessMsg() {
-			return driver.findElement(success_Msg).getText();
-		}
-	
-	public void selectFromList(By input, String value) throws InterruptedException {
-		
-		driver.findElement(input).sendKeys(value);
+	}
+
+	public String getSuccessMsg() throws InterruptedException {
+		handleLoaderDisplay();
+		String successMsg = driverWait.until(ExpectedConditions.visibilityOfElementLocated(success_Msg)).getText();
 		Thread.sleep(2000);
-		driverWait.until(ExpectedConditions.visibilityOfElementLocated(menu_item));
-		driver.findElement(menu_item).click();		
+		return successMsg;
 		}
+
+	public void selectFromList(By input, String value, By menu_Item) throws InterruptedException {
+
+		driverWait.until(ExpectedConditions.visibilityOfElementLocated(input)).sendKeys(value);
+		handleLoaderDisplay();
+		driverWait.until(ExpectedConditions.visibilityOfElementLocated(menu_Item)).click();
+		handleLoaderDisplay();
+	}
 
 }

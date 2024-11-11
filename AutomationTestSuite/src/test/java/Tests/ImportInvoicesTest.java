@@ -2,7 +2,6 @@ package Tests;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import Pages.LoginPage;
@@ -22,22 +21,19 @@ public class ImportInvoicesTest extends TestBase{
 	
 
 	@BeforeClass
-	public void beforeClass() {
+	public void beforeClass() throws InterruptedException {
 		loginPage = new LoginPage(driver);
 		dashboard = new DashboardPage(driver);
 		companyDashboard = new CompanyDashboardPage(driver);
 		salesModule = new SalesPage(driver);
 		purchasesModule = new PurchasesPage(driver);
-		importInvoicesPage = new ImportInvoicesPage(driver);		
-
-	}
-
-	@BeforeMethod
-	public void login() throws InterruptedException {
+		importInvoicesPage = new ImportInvoicesPage(driver);
 		loginPage.login("nahlamakhlouf1@gmail.com", "123456");
 		dashboard.browseCompany("Automation");
+
 	}
-	@Test
+
+	@Test (priority = 1)
 	public void ImportSalesInvoices() throws InterruptedException {
 		companyDashboard.openModule("sales");
 		salesModule.openImportInvoicesPage();
@@ -45,11 +41,11 @@ public class ImportInvoicesTest extends TestBase{
 		Assert.assertEquals(salesModule.getSuccessMsg(), "تم رفع الملف بنجاح. سيتم عرض البيانات بعد إنتهاء عملية المعالجة!");
 	}
 	
-	@Test
-	public void ImportPurchaseInvoices() {
+	@Test (priority = 2)
+	public void ImportPurchaseInvoices() throws InterruptedException {
 		companyDashboard.openModule("purchases");
 		purchasesModule.openImportInvoicesPage();
-		importInvoicesPage.importSalesInvoices();
+		importInvoicesPage.importPurchasesInvoices();
 		Assert.assertEquals(purchasesModule.getSuccessMsg(), "تم رفع الملف بنجاح. سيتم عرض البيانات بعد إنتهاء عملية المعالجة!");
 	}
 	

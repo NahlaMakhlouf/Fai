@@ -3,84 +3,20 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Tests.SalesTest">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="openCreateSalesInvoicePage"/>
-          <include name="openCreateReturnSalesInvoicePage"/>
-          <include name="openImportSalesPage"/>
-          <include name="beforeClass"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- Tests.SalesTest -->
       <class name="Tests.CreateNewReturnInvoiceTest">
         <methods>
-          <include name="login"/>
-          <include name="createNewReturnSalesInvoice"/>
+          <include name="createNewPurchaseReturnInvoiceWithoutReferenceInvoice" invocation-numbers="0"/>
           <include name="beforeClass"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- Tests.CreateNewReturnInvoiceTest -->
       <class name="Tests.CreateNewInvoiceTest">
         <methods>
-          <include name="createNewPurchaseInvoice"/>
-          <include name="createNewSalesInvoice"/>
+          <include name="createNewPurchaseInvoice" invocation-numbers="0"/>
           <include name="beforeClass"/>
-          <include name="login"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- Tests.CreateNewInvoiceTest -->
-      <class name="Tests.ReportsTest">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="beforeMethod"/>
-          <include name="openCreateNewReportPage"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- Tests.ReportsTest -->
-      <class name="Tests.LoginTest">
-        <methods>
-          <include name="loginAndAssert"/>
-          <include name="beforeClass"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- Tests.LoginTest -->
-      <class name="Tests.DashboardTest">
-        <methods>
-          <include name="login"/>
-          <include name="goToCompanyDashboardAndAssertCompanyNameIsDisplayed"/>
-          <include name="beforeClass"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- Tests.DashboardTest -->
-      <class name="Tests.CompanyDashboardTest">
-        <methods>
-          <include name="gotoCompanyDashboard"/>
-          <include name="openModuleAndAssertPageTitle"/>
-          <include name="beforeClass"/>
-          <include name="login"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- Tests.CompanyDashboardTest -->
-      <class name="Tests.ImportInvoicesTest">
-        <methods>
-          <include name="ImportPurchaseInvoices"/>
-          <include name="beforeClass"/>
-          <include name="ImportSalesInvoices"/>
-          <include name="setUp"/>
-          <include name="login"/>
-        </methods>
-      </class> <!-- Tests.ImportInvoicesTest -->
-      <class name="Tests.PurchasesTest">
-        <methods>
-          <include name="login"/>
-          <include name="openImportSalesPage"/>
-          <include name="beforeClass"/>
-          <include name="openCreateSalesInvoicePage"/>
-          <include name="openCreateReturnSalesInvoicePage"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- Tests.PurchasesTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

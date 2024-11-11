@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/15</td>
+<td>Tests passed/Failed/Skipped:</td><td>13/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Aug 31 15:26:23 EEST 2024</td>
+<td>Started on:</td><td>Mon Nov 11 14:43:58 EET 2024</td>
 </tr>
-<tr><td>Total time:</td><td>21 seconds (21563 ms)</td>
+<tr><td>Total time:</td><td>461 seconds (461591 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,7 +68,7 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,29 +76,27 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Tests.CreateNewInvoiceTest.beforeClass()'><b>beforeClass</b><br>Test class: Tests.CreateNewInvoiceTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.CreateNewInvoiceTest.beforeClass(CreateNewInvoiceTest.java:31)
+<td title='Tests.CreateNewInvoiceTest.createNewPurchaseInvoice()'><b>createNewPurchaseInvoice</b><br>Test class: Tests.CreateNewInvoiceTest<br>Parameters: P_Aug001, Nahla, Aug 01 2024, Aug 01 2024, test invoice notes, product2, أصل, test product description, 1, 0, SA_PU_S050</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at Tests.CreateNewInvoiceTest.createNewPurchaseInvoice(CreateNewInvoiceTest.java:89)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1552767213", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1552767213'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.CreateNewInvoiceTest.beforeClass(CreateNewInvoiceTest.java:31)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace798524826", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace798524826'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at Tests.CreateNewInvoiceTest.createNewPurchaseInvoice(CreateNewInvoiceTest.java:89)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at org.testng.TestRunner.privateRun(TestRunner.java:848)
 	at org.testng.TestRunner.run(TestRunner.java:621)
@@ -116,32 +114,30 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>0</td>
-<td>Tests.CreateNewInvoiceTest@52f27fbd</td></tr>
+<td>30</td>
+<td>Tests.CreateNewInvoiceTest@4d1bf319</td></tr>
 <tr>
-<td title='Tests.PurchasesTest.beforeClass()'><b>beforeClass</b><br>Test class: Tests.PurchasesTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.PurchasesTest.beforeClass(PurchasesTest.java:27)
+<td title='Tests.CreateNewReturnInvoiceTest.createNewPurchaseReturnInvoiceWithoutReferenceInvoice()'><b>createNewPurchaseReturnInvoiceWithoutReferenceInvoice</b><br>Test class: Tests.CreateNewReturnInvoiceTest<br>Parameters: p_return001, Nahla, Aug 05 2024, Aug 05 2024, test invoice notes, product2, أصل, test description, 1, 0, SA_PU_S050-مرتجع</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at Tests.CreateNewReturnInvoiceTest.createNewPurchaseReturnInvoiceWithoutReferenceInvoice(CreateNewReturnInvoiceTest.java:193)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1839548688", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1839548688'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.PurchasesTest.beforeClass(PurchasesTest.java:27)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1526868121", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1526868121'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at Tests.CreateNewReturnInvoiceTest.createNewPurchaseReturnInvoiceWithoutReferenceInvoice(CreateNewReturnInvoiceTest.java:193)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at org.testng.TestRunner.privateRun(TestRunner.java:848)
 	at org.testng.TestRunner.run(TestRunner.java:621)
@@ -159,393 +155,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>0</td>
-<td>Tests.PurchasesTest@3f4faf53</td></tr>
-<tr>
-<td title='Tests.ImportInvoicesTest.beforeClass()'><b>beforeClass</b><br>Test class: Tests.ImportInvoicesTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.ImportInvoicesTest.beforeClass(ImportInvoicesTest.java:26)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace778925754", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace778925754'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.ImportInvoicesTest.beforeClass(ImportInvoicesTest.java:26)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.ImportInvoicesTest@25be7b63</td></tr>
-<tr>
-<td title='Tests.CreateNewReturnInvoiceTest.beforeClass()'><b>beforeClass</b><br>Test class: Tests.CreateNewReturnInvoiceTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.CreateNewReturnInvoiceTest.beforeClass(CreateNewReturnInvoiceTest.java:26)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2057313241", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2057313241'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.CreateNewReturnInvoiceTest.beforeClass(CreateNewReturnInvoiceTest.java:26)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.CreateNewReturnInvoiceTest@723ca036</td></tr>
-<tr>
-<td title='Tests.ReportsTest.beforeClass()'><b>beforeClass</b><br>Test class: Tests.ReportsTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.ReportsTest.beforeClass(ReportsTest.java:24)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1413020227", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1413020227'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.ReportsTest.beforeClass(ReportsTest.java:24)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.ReportsTest@304bb45b</td></tr>
-<tr>
-<td title='Tests.SalesTest.beforeClass()'><b>beforeClass</b><br>Test class: Tests.SalesTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.SalesTest.beforeClass(SalesTest.java:27)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1231864343", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1231864343'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.SalesTest.beforeClass(SalesTest.java:27)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.SalesTest@28dcca0c</td></tr>
-<tr>
-<td title='Tests.DashboardTest.beforeClass()'><b>beforeClass</b><br>Test class: Tests.DashboardTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.DashboardTest.beforeClass(DashboardTest.java:22)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1304765785", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1304765785'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.DashboardTest.beforeClass(DashboardTest.java:22)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.DashboardTest@7fd50002</td></tr>
-<tr>
-<td title='Tests.LoginTest.beforeClass()'><b>beforeClass</b><br>Test class: Tests.LoginTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.LoginTest.beforeClass(LoginTest.java:24)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace940905579", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace940905579'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.LoginTest.beforeClass(LoginTest.java:24)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.LoginTest@4c163e3</td></tr>
-<tr>
-<td title='Tests.CompanyDashboardTest.beforeClass()'><b>beforeClass</b><br>Test class: Tests.CompanyDashboardTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.CompanyDashboardTest.beforeClass(CompanyDashboardTest.java:23)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace350099713", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace350099713'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.CompanyDashboardTest.beforeClass(CompanyDashboardTest.java:23)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.CompanyDashboardTest@45d84a20</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='Tests.SalesTest.beforeMethod()'><b>beforeMethod</b><br>Test class: Tests.SalesTest</td>
-<td></td>
-<td>0</td>
-<td>Tests.SalesTest@28dcca0c</td></tr>
-<tr>
-<td title='Tests.CreateNewReturnInvoiceTest.login()'><b>login</b><br>Test class: Tests.CreateNewReturnInvoiceTest</td>
-<td></td>
-<td>0</td>
-<td>Tests.CreateNewReturnInvoiceTest@723ca036</td></tr>
-<tr>
-<td title='Tests.CreateNewInvoiceTest.login()'><b>login</b><br>Test class: Tests.CreateNewInvoiceTest</td>
-<td></td>
-<td>0</td>
-<td>Tests.CreateNewInvoiceTest@52f27fbd</td></tr>
-<tr>
-<td title='Tests.PurchasesTest.login()'><b>login</b><br>Test class: Tests.PurchasesTest</td>
-<td></td>
-<td>0</td>
-<td>Tests.PurchasesTest@3f4faf53</td></tr>
-<tr>
-<td title='Tests.ReportsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: Tests.ReportsTest</td>
-<td></td>
-<td>0</td>
-<td>Tests.ReportsTest@304bb45b</td></tr>
-<tr>
-<td title='Tests.SalesTest.beforeMethod()'><b>beforeMethod</b><br>Test class: Tests.SalesTest</td>
-<td></td>
-<td>0</td>
-<td>Tests.SalesTest@28dcca0c</td></tr>
-<tr>
-<td title='Tests.ImportInvoicesTest.login()'><b>login</b><br>Test class: Tests.ImportInvoicesTest</td>
-<td></td>
-<td>0</td>
-<td>Tests.ImportInvoicesTest@25be7b63</td></tr>
-<tr>
-<td title='Tests.CompanyDashboardTest.login()'><b>login</b><br>Test class: Tests.CompanyDashboardTest</td>
-<td></td>
-<td>0</td>
-<td>Tests.CompanyDashboardTest@45d84a20</td></tr>
-<tr>
-<td title='Tests.DashboardTest.login()'><b>login</b><br>Test class: Tests.DashboardTest</td>
-<td></td>
-<td>0</td>
-<td>Tests.DashboardTest@7fd50002</td></tr>
-<tr>
-<td title='Tests.ImportInvoicesTest.login()'><b>login</b><br>Test class: Tests.ImportInvoicesTest</td>
-<td></td>
-<td>0</td>
-<td>Tests.ImportInvoicesTest@25be7b63</td></tr>
-<tr>
-<td title='Tests.SalesTest.beforeMethod()'><b>beforeMethod</b><br>Test class: Tests.SalesTest</td>
-<td></td>
-<td>0</td>
-<td>Tests.SalesTest@28dcca0c</td></tr>
-<tr>
-<td title='Tests.PurchasesTest.login()'><b>login</b><br>Test class: Tests.PurchasesTest</td>
-<td></td>
-<td>0</td>
-<td>Tests.PurchasesTest@3f4faf53</td></tr>
-<tr>
-<td title='Tests.CreateNewInvoiceTest.login()'><b>login</b><br>Test class: Tests.CreateNewInvoiceTest</td>
-<td></td>
-<td>0</td>
-<td>Tests.CreateNewInvoiceTest@52f27fbd</td></tr>
-<tr>
-<td title='Tests.PurchasesTest.login()'><b>login</b><br>Test class: Tests.PurchasesTest</td>
-<td></td>
-<td>0</td>
-<td>Tests.PurchasesTest@3f4faf53</td></tr>
-<tr>
-<td title='Tests.CompanyDashboardTest.gotoCompanyDashboard()'><b>gotoCompanyDashboard</b><br>Test class: Tests.CompanyDashboardTest</td>
-<td></td>
-<td>0</td>
-<td>Tests.CompanyDashboardTest@45d84a20</td></tr>
+<td>19</td>
+<td>Tests.CreateNewReturnInvoiceTest@6f53b8a</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -556,664 +167,70 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Tests.CreateNewVATReportTest.createNewVatReport()'><b>createNewVatReport</b><br>Test class: Tests.CreateNewVATReportTest<br>Parameters: يوليو 2024, july 2024, يوليو, 2024, تقرير شهر يوليو سنه 2024</td>
+<td title='Tests.CreateNewReturnInvoiceTest.createNewPurchaseCashbackInvoice()'><b>createNewPurchaseCashbackInvoice</b><br>Test class: Tests.CreateNewReturnInvoiceTest<br>Parameters: p_Cashback001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, 1000, SA_PU_S050-مرتجع</td>
 <td></td>
-<td>9</td>
-<td>Tests.CreateNewVATReportTest@1972e513</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='Tests.PurchasesTest.openCreateSalesInvoicePage()'><b>openCreateSalesInvoicePage</b><br>Test class: Tests.PurchasesTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.PurchasesTest.beforeClass(PurchasesTest.java:27)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1370231468", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1370231468'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.PurchasesTest.beforeClass(PurchasesTest.java:27)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.PurchasesTest@3f4faf53</td></tr>
-<tr>
-<td title='Tests.CompanyDashboardTest.openModuleAndAssertPageTitle()'><b>openModuleAndAssertPageTitle</b><br>Test class: Tests.CompanyDashboardTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.CompanyDashboardTest.beforeClass(CompanyDashboardTest.java:23)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace233271622", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace233271622'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.CompanyDashboardTest.beforeClass(CompanyDashboardTest.java:23)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.CompanyDashboardTest@45d84a20</td></tr>
-<tr>
-<td title='Tests.CreateNewInvoiceTest.createNewPurchaseInvoice()'><b>createNewPurchaseInvoice</b><br>Test class: Tests.CreateNewInvoiceTest<br>Parameters: P_Aug001, Nahla, Aug 01 2024, Aug 01 2024, test invoice notes, product2, أصل, test product description, 1, 0, SA_PU_S050</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.CreateNewInvoiceTest.beforeClass(CreateNewInvoiceTest.java:31)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace382441865", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace382441865'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.CreateNewInvoiceTest.beforeClass(CreateNewInvoiceTest.java:31)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.CreateNewInvoiceTest@52f27fbd</td></tr>
-<tr>
-<td title='Tests.DashboardTest.goToCompanyDashboardAndAssertCompanyNameIsDisplayed()'><b>goToCompanyDashboardAndAssertCompanyNameIsDisplayed</b><br>Test class: Tests.DashboardTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.DashboardTest.beforeClass(DashboardTest.java:22)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace104912388", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace104912388'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.DashboardTest.beforeClass(DashboardTest.java:22)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.DashboardTest@7fd50002</td></tr>
-<tr>
-<td title='Tests.SalesTest.openCreateSalesInvoicePage()'><b>openCreateSalesInvoicePage</b><br>Test class: Tests.SalesTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.SalesTest.beforeClass(SalesTest.java:27)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace950831464", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace950831464'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.SalesTest.beforeClass(SalesTest.java:27)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.SalesTest@28dcca0c</td></tr>
-<tr>
-<td title='Tests.ReportsTest.openCreateNewReportPage()'><b>openCreateNewReportPage</b><br>Test class: Tests.ReportsTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.ReportsTest.beforeClass(ReportsTest.java:24)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1829651877", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1829651877'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.ReportsTest.beforeClass(ReportsTest.java:24)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.ReportsTest@304bb45b</td></tr>
-<tr>
-<td title='Tests.CreateNewInvoiceTest.createNewSalesInvoice()'><b>createNewSalesInvoice</b><br>Test class: Tests.CreateNewInvoiceTest<br>Parameters: Aug001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, product1, بضائع, test product description, 5, 10, SA_SA_S050</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.CreateNewInvoiceTest.beforeClass(CreateNewInvoiceTest.java:31)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace885465900", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace885465900'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.CreateNewInvoiceTest.beforeClass(CreateNewInvoiceTest.java:31)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.CreateNewInvoiceTest@52f27fbd</td></tr>
-<tr>
-<td title='Tests.ImportInvoicesTest.ImportSalesInvoices()'><b>ImportSalesInvoices</b><br>Test class: Tests.ImportInvoicesTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.ImportInvoicesTest.beforeClass(ImportInvoicesTest.java:26)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace749030825", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace749030825'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.ImportInvoicesTest.beforeClass(ImportInvoicesTest.java:26)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.ImportInvoicesTest@25be7b63</td></tr>
+<td>16</td>
+<td>Tests.CreateNewReturnInvoiceTest@6f53b8a</td></tr>
 <tr>
 <td title='Tests.LoginTest.loginAndAssert()'><b>loginAndAssert</b><br>Test class: Tests.LoginTest<br>Parameters: nahlamakhlouf1@gmail.com, 123456</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.LoginTest.beforeClass(LoginTest.java:24)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1351275110", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1351275110'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.LoginTest.beforeClass(LoginTest.java:24)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.LoginTest@4c163e3</td></tr>
+<td></td>
+<td>2</td>
+<td>Tests.LoginTest@312aa7c</td></tr>
+<tr>
+<td title='Tests.CreateNewProductTest.createNewProduct()'><b>createNewProduct</b><br>Test class: Tests.CreateNewProductTest<br>Parameters: منتج, product, وصف المنتج, product description, كلاهما, 1000, Auto</td>
+<td></td>
+<td>7</td>
+<td>Tests.CreateNewProductTest@6b695b06</td></tr>
 <tr>
 <td title='Tests.ImportInvoicesTest.ImportPurchaseInvoices()'><b>ImportPurchaseInvoices</b><br>Test class: Tests.ImportInvoicesTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.ImportInvoicesTest.beforeClass(ImportInvoicesTest.java:26)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2100297853", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2100297853'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.ImportInvoicesTest.beforeClass(ImportInvoicesTest.java:26)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.ImportInvoicesTest@25be7b63</td></tr>
+<td></td>
+<td>7</td>
+<td>Tests.ImportInvoicesTest@5c80cf32</td></tr>
 <tr>
-<td title='Tests.SalesTest.openImportSalesPage()'><b>openImportSalesPage</b><br>Test class: Tests.SalesTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.SalesTest.beforeClass(SalesTest.java:27)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace990722659", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace990722659'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.SalesTest.beforeClass(SalesTest.java:27)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.SalesTest@28dcca0c</td></tr>
+<td title='Tests.CreateNewClientTest.createNewClient()'><b>createNewClient</b><br>Test class: Tests.CreateNewClientTest<br>Parameters: Both, منة الله عماد, Menna Emad, حساب, كلاهما, مؤسسة, 1111122222, 2147483647, https://fai-wp.ahadtest.com, 331111111111113, مصر, الإسكندرية, سموحه, 123, 12345, سموحه, smouha, 0559505553, menna@fai.sa, ماريو نادى, MarioNady, مدير منتج, product manager, mario@fai.sa, مُعتَمَد, 0559505554</td>
+<td></td>
+<td>8</td>
+<td>Tests.CreateNewClientTest@4f32a3ad</td></tr>
 <tr>
-<td title='Tests.SalesTest.openCreateReturnSalesInvoicePage()'><b>openCreateReturnSalesInvoicePage</b><br>Test class: Tests.SalesTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.SalesTest.beforeClass(SalesTest.java:27)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1821711066", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1821711066'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.SalesTest.beforeClass(SalesTest.java:27)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.SalesTest@28dcca0c</td></tr>
+<td title='Tests.CreateNewInvoiceTest.createNewSalesInvoice()'><b>createNewSalesInvoice</b><br>Test class: Tests.CreateNewInvoiceTest<br>Parameters: Aug001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, product1, بضائع, test product description, 5, 10, SA_SA_S050</td>
+<td></td>
+<td>36</td>
+<td>Tests.CreateNewInvoiceTest@4d1bf319</td></tr>
 <tr>
-<td title='Tests.PurchasesTest.openCreateReturnSalesInvoicePage()'><b>openCreateReturnSalesInvoicePage</b><br>Test class: Tests.PurchasesTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.PurchasesTest.beforeClass(PurchasesTest.java:27)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1983472905", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1983472905'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.PurchasesTest.beforeClass(PurchasesTest.java:27)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.PurchasesTest@3f4faf53</td></tr>
+<td title='Tests.CreateNewVATReportTest.createNewVatReport()'><b>createNewVatReport</b><br>Test class: Tests.CreateNewVATReportTest<br>Parameters: يوليو 2024, july 2024, يوليو, 2024, تقرير شهر يوليو سنه 2024</td>
+<td></td>
+<td>7</td>
+<td>Tests.CreateNewVATReportTest@7d900ecf</td></tr>
 <tr>
-<td title='Tests.CreateNewReturnInvoiceTest.createNewReturnSalesInvoice()'><b>createNewReturnSalesInvoice</b><br>Test class: Tests.CreateNewReturnInvoiceTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.CreateNewReturnInvoiceTest.beforeClass(CreateNewReturnInvoiceTest.java:26)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace627815870", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace627815870'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.CreateNewReturnInvoiceTest.beforeClass(CreateNewReturnInvoiceTest.java:26)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.CreateNewReturnInvoiceTest@723ca036</td></tr>
+<td title='Tests.CreateNewReturnInvoiceTest.createNewReturnPurchaseInvoice()'><b>createNewReturnPurchaseInvoice</b><br>Test class: Tests.CreateNewReturnInvoiceTest<br>Parameters: purchases001, purchases001_return, Jul 05 2024, Jul 05 2024, test invoice notes, 1</td>
+<td></td>
+<td>20</td>
+<td>Tests.CreateNewReturnInvoiceTest@6f53b8a</td></tr>
 <tr>
-<td title='Tests.PurchasesTest.openImportSalesPage()'><b>openImportSalesPage</b><br>Test class: Tests.PurchasesTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.PurchasesTest.beforeClass(PurchasesTest.java:27)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2073484941", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2073484941'><pre>java.lang.IllegalArgumentException: Driver must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:59)
-	at Pages.PageBase.&lt;init&gt;(PageBase.java:26)
-	at Pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
-	at Tests.PurchasesTest.beforeClass(PurchasesTest.java:27)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>Tests.PurchasesTest@3f4faf53</td></tr>
+<td title='Tests.ImportInvoicesTest.ImportSalesInvoices()'><b>ImportSalesInvoices</b><br>Test class: Tests.ImportInvoicesTest</td>
+<td></td>
+<td>6</td>
+<td>Tests.ImportInvoicesTest@5c80cf32</td></tr>
+<tr>
+<td title='Tests.CreateNewReturnInvoiceTest.createNewReturnSalesInvoice()'><b>createNewReturnSalesInvoice</b><br>Test class: Tests.CreateNewReturnInvoiceTest<br>Parameters: sales001, sales001_return, Jul 05 2024, Jul 05 2024, test invoice notes, 1</td>
+<td></td>
+<td>19</td>
+<td>Tests.CreateNewReturnInvoiceTest@6f53b8a</td></tr>
+<tr>
+<td title='Tests.CreateNewReturnInvoiceTest.createNewSalesReturnInvoiceWithoutReferenceInvoice()'><b>createNewSalesReturnInvoiceWithoutReferenceInvoice</b><br>Test class: Tests.CreateNewReturnInvoiceTest<br>Parameters: return001, Nahla, Aug 05 2024, Aug 05 2024, test invoice notes, product1, بضائع, test description, 1, 0, SA_SA_S050-مرتجع</td>
+<td></td>
+<td>31</td>
+<td>Tests.CreateNewReturnInvoiceTest@6f53b8a</td></tr>
+<tr>
+<td title='Tests.CreateNewReturnInvoiceTest.createNewCashbackSalesInvoice()'><b>createNewCashbackSalesInvoice</b><br>Test class: Tests.CreateNewReturnInvoiceTest<br>Parameters: Cashback001, Nahla, Aug 12 2024, Aug 12 2024, test invoice notes, 500, SA_SA_S050-مرتجع</td>
+<td></td>
+<td>23</td>
+<td>Tests.CreateNewReturnInvoiceTest@6f53b8a</td></tr>
+<tr>
+<td title='Tests.CreateNewCompanyTest.createNewCompany()'><b>createNewCompany</b><br>Test class: Tests.CreateNewCompanyTest<br>Parameters: Fai, منشأة, مؤسسة, 1234567890, 1111122222, 0987654321, 311111111111113, Jan 01 2024, شهري, mario@fai.sa, Mario Nady, مالك الحساب</td>
+<td></td>
+<td>29</td>
+<td>Tests.CreateNewCompanyTest@71075444</td></tr>
 </table><p>
 </body>
 </html>

@@ -17,6 +17,7 @@ public class CreateNewInvoicePage extends PageBase {
 	private By clientName_Input = By.xpath("//input[contains(@class,'mantine-Input-input')]");
 	private By invoiceDate_Input = By.xpath("(//button[contains(@class,'mantine-DatePickerInput-input')])[1]");
 	private By paymentDate_Input = By.xpath("(//button[contains(@class,'mantine-DatePickerInput-input')])[2]");
+	private By menu_item = By.xpath("(//div[contains(@class, 'mantine-Select-item')])[1]");
 	private By invoiceNotes_Input = By.name("description");
 	private By upload_Btn=By.xpath("//input[@type='file']");
 	private By next_Btn = By.xpath("//button[@type='submit']");
@@ -38,7 +39,7 @@ public class CreateNewInvoicePage extends PageBase {
 	public void CreateNewInvoiceStep1(String invoiceNo, String clientName, String invoiceDate, String paymentDate, String invoiceNotes) throws InterruptedException {
 		
 		driver.findElement(invoiceNumber_Input).sendKeys(invoiceNo);
-		selectFromList(clientName_Input, clientName);
+		selectFromList(clientName_Input, clientName, menu_item);
 		setDate(invoiceDate_Input, invoiceDate);
 		Thread.sleep(1000);
 		setDate(paymentDate_Input, paymentDate);
@@ -52,8 +53,8 @@ public class CreateNewInvoicePage extends PageBase {
 	
 	public void CreateNewInvoiceStep2(String product, String category, String productDescription, String quantity, String discount, String VATCode) throws InterruptedException {
 		
-		selectFromList(product_Input, product);
-		selectFromList(Category_Input, category);
+		selectFromList(product_Input, product, menu_item);
+		selectFromList(Category_Input, category, menu_item);
 		driver.findElement(productDescription_Input).sendKeys(productDescription);
 		driver.findElement(productQuantity_Input).sendKeys(Keys.BACK_SPACE);
 		driver.findElement(productQuantity_Input).sendKeys(quantity);

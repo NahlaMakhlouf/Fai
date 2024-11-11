@@ -19,6 +19,7 @@ public class CreateNewReturnInvoicePage extends CreateNewInvoicePage {
 	private By invoiceNumber_Input = By.name("invoice_number");
 	private By invoiceDate_Input = By.xpath("(//button[contains(@class,'mantine-DatePickerInput-input')])[1]");
 	private By paymentDate_Input = By.xpath("(//button[contains(@class,'mantine-DatePickerInput-input')])[2]");
+	private By menu_item = By.xpath("(//div[contains(@class, 'mantine-Select-item')])[1]");
 	private By invoiceNotes_Input = By.name("description");
 	private By upload_Btn = By.xpath("//input[@type='file']");
 	private By editProduct_Btn = By.xpath("//div[@class='controls']/div");
@@ -29,7 +30,7 @@ public class CreateNewReturnInvoicePage extends CreateNewInvoicePage {
 
 	private By next_Btn = By.xpath("//button[@type='submit']");
 	private By addToList_Btn = By.xpath("//button[@type='submit']");
-	private By create_Btn = By.xpath("//button[@class='sc-eCstZk cjwIVv']");
+	private By create_Btn = By.cssSelector("button[type='button'].sc-eCstZk.cjwIVv");
 
 
 	public void CreateNewReturnInvoiceStep1() {
@@ -38,8 +39,7 @@ public class CreateNewReturnInvoicePage extends CreateNewInvoicePage {
 	}
 
 	public void CreateNewReturnInvoiceStep2(String referenceInvoiceNumber) throws InterruptedException {
-		selectFromList(referenceInvoiceNumber_Input, referenceInvoiceNumber);
-		handleLoaderDisplay();
+		selectFromList(referenceInvoiceNumber_Input, referenceInvoiceNumber, menu_item);
 		driverWait.until(ExpectedConditions.elementToBeClickable(next_Btn)).click();
 		handleLoaderDisplay();
 	}
@@ -96,15 +96,9 @@ public class CreateNewReturnInvoicePage extends CreateNewInvoicePage {
 	}
 
 	public void CreateNewCashbackInvoiceStep3(String price, String VATCode) throws InterruptedException {
-		driver.findElement(productPrice_Input).sendKeys(price);
-		
-		driver.findElement(VATCode_Input).sendKeys(VATCode);
-		handleLoaderDisplay();
-		driverWait.until(ExpectedConditions.visibilityOfElementLocated(VATCode_Item)).click();
-		handleLoaderDisplay();
-		
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//button[@class='sc-eCstZk cjwIVv']")));
-		System.out.println("button clicked");
+		driverWait.until(ExpectedConditions.visibilityOfElementLocated(productPrice_Input)).sendKeys(price);    
+	    selectFromList(VATCode_Input, VATCode, VATCode_Item);
+		driverWait.until(ExpectedConditions.elementToBeClickable(create_Btn)).click();
 		handleLoaderDisplay();
 	}
 
