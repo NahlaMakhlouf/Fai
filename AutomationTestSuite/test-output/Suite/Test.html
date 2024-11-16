@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>13/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>8/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Nov 11 14:43:58 EET 2024</td>
+<td>Started on:</td><td>Wed Nov 13 12:56:24 EET 2024</td>
 </tr>
-<tr><td>Total time:</td><td>461 seconds (461591 ms)</td>
+<tr><td>Total time:</td><td>152 seconds (152850 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,97 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='Tests.CreateNewInvoiceTest.createNewPurchaseInvoice()'><b>createNewPurchaseInvoice</b><br>Test class: Tests.CreateNewInvoiceTest<br>Parameters: P_Aug001, Nahla, Aug 01 2024, Aug 01 2024, test invoice notes, product2, أصل, test product description, 1, 0, SA_PU_S050</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at Tests.CreateNewInvoiceTest.createNewPurchaseInvoice(CreateNewInvoiceTest.java:89)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace798524826", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace798524826'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at Tests.CreateNewInvoiceTest.createNewPurchaseInvoice(CreateNewInvoiceTest.java:89)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>30</td>
-<td>Tests.CreateNewInvoiceTest@4d1bf319</td></tr>
-<tr>
-<td title='Tests.CreateNewReturnInvoiceTest.createNewPurchaseReturnInvoiceWithoutReferenceInvoice()'><b>createNewPurchaseReturnInvoiceWithoutReferenceInvoice</b><br>Test class: Tests.CreateNewReturnInvoiceTest<br>Parameters: p_return001, Nahla, Aug 05 2024, Aug 05 2024, test invoice notes, product2, أصل, test description, 1, 0, SA_PU_S050-مرتجع</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at Tests.CreateNewReturnInvoiceTest.createNewPurchaseReturnInvoiceWithoutReferenceInvoice(CreateNewReturnInvoiceTest.java:193)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1526868121", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1526868121'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at Tests.CreateNewReturnInvoiceTest.createNewPurchaseReturnInvoiceWithoutReferenceInvoice(CreateNewReturnInvoiceTest.java:193)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>19</td>
-<td>Tests.CreateNewReturnInvoiceTest@6f53b8a</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -169,68 +78,43 @@ function toggleAllBoxes() {
 <tr>
 <td title='Tests.CreateNewReturnInvoiceTest.createNewPurchaseCashbackInvoice()'><b>createNewPurchaseCashbackInvoice</b><br>Test class: Tests.CreateNewReturnInvoiceTest<br>Parameters: p_Cashback001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, 1000, SA_PU_S050-مرتجع</td>
 <td></td>
-<td>16</td>
-<td>Tests.CreateNewReturnInvoiceTest@6f53b8a</td></tr>
+<td>14</td>
+<td>Tests.CreateNewReturnInvoiceTest@2a693f59</td></tr>
 <tr>
-<td title='Tests.LoginTest.loginAndAssert()'><b>loginAndAssert</b><br>Test class: Tests.LoginTest<br>Parameters: nahlamakhlouf1@gmail.com, 123456</td>
-<td></td>
-<td>2</td>
-<td>Tests.LoginTest@312aa7c</td></tr>
-<tr>
-<td title='Tests.CreateNewProductTest.createNewProduct()'><b>createNewProduct</b><br>Test class: Tests.CreateNewProductTest<br>Parameters: منتج, product, وصف المنتج, product description, كلاهما, 1000, Auto</td>
-<td></td>
-<td>7</td>
-<td>Tests.CreateNewProductTest@6b695b06</td></tr>
-<tr>
-<td title='Tests.ImportInvoicesTest.ImportPurchaseInvoices()'><b>ImportPurchaseInvoices</b><br>Test class: Tests.ImportInvoicesTest</td>
-<td></td>
-<td>7</td>
-<td>Tests.ImportInvoicesTest@5c80cf32</td></tr>
-<tr>
-<td title='Tests.CreateNewClientTest.createNewClient()'><b>createNewClient</b><br>Test class: Tests.CreateNewClientTest<br>Parameters: Both, منة الله عماد, Menna Emad, حساب, كلاهما, مؤسسة, 1111122222, 2147483647, https://fai-wp.ahadtest.com, 331111111111113, مصر, الإسكندرية, سموحه, 123, 12345, سموحه, smouha, 0559505553, menna@fai.sa, ماريو نادى, MarioNady, مدير منتج, product manager, mario@fai.sa, مُعتَمَد, 0559505554</td>
-<td></td>
-<td>8</td>
-<td>Tests.CreateNewClientTest@4f32a3ad</td></tr>
-<tr>
-<td title='Tests.CreateNewInvoiceTest.createNewSalesInvoice()'><b>createNewSalesInvoice</b><br>Test class: Tests.CreateNewInvoiceTest<br>Parameters: Aug001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, product1, بضائع, test product description, 5, 10, SA_SA_S050</td>
-<td></td>
-<td>36</td>
-<td>Tests.CreateNewInvoiceTest@4d1bf319</td></tr>
-<tr>
-<td title='Tests.CreateNewVATReportTest.createNewVatReport()'><b>createNewVatReport</b><br>Test class: Tests.CreateNewVATReportTest<br>Parameters: يوليو 2024, july 2024, يوليو, 2024, تقرير شهر يوليو سنه 2024</td>
-<td></td>
-<td>7</td>
-<td>Tests.CreateNewVATReportTest@7d900ecf</td></tr>
-<tr>
-<td title='Tests.CreateNewReturnInvoiceTest.createNewReturnPurchaseInvoice()'><b>createNewReturnPurchaseInvoice</b><br>Test class: Tests.CreateNewReturnInvoiceTest<br>Parameters: purchases001, purchases001_return, Jul 05 2024, Jul 05 2024, test invoice notes, 1</td>
-<td></td>
-<td>20</td>
-<td>Tests.CreateNewReturnInvoiceTest@6f53b8a</td></tr>
-<tr>
-<td title='Tests.ImportInvoicesTest.ImportSalesInvoices()'><b>ImportSalesInvoices</b><br>Test class: Tests.ImportInvoicesTest</td>
-<td></td>
-<td>6</td>
-<td>Tests.ImportInvoicesTest@5c80cf32</td></tr>
-<tr>
-<td title='Tests.CreateNewReturnInvoiceTest.createNewReturnSalesInvoice()'><b>createNewReturnSalesInvoice</b><br>Test class: Tests.CreateNewReturnInvoiceTest<br>Parameters: sales001, sales001_return, Jul 05 2024, Jul 05 2024, test invoice notes, 1</td>
+<td title='Tests.CreateNewInvoiceTest.createNewPurchaseInvoice()'><b>createNewPurchaseInvoice</b><br>Test class: Tests.CreateNewInvoiceTest<br>Parameters: P_Aug001, Nahla, Aug 01 2024, Aug 01 2024, test invoice notes, product2, أصل, test product description, 1, 0, SA_PU_S050</td>
 <td></td>
 <td>19</td>
-<td>Tests.CreateNewReturnInvoiceTest@6f53b8a</td></tr>
-<tr>
-<td title='Tests.CreateNewReturnInvoiceTest.createNewSalesReturnInvoiceWithoutReferenceInvoice()'><b>createNewSalesReturnInvoiceWithoutReferenceInvoice</b><br>Test class: Tests.CreateNewReturnInvoiceTest<br>Parameters: return001, Nahla, Aug 05 2024, Aug 05 2024, test invoice notes, product1, بضائع, test description, 1, 0, SA_SA_S050-مرتجع</td>
-<td></td>
-<td>31</td>
-<td>Tests.CreateNewReturnInvoiceTest@6f53b8a</td></tr>
+<td>Tests.CreateNewInvoiceTest@302c971f</td></tr>
 <tr>
 <td title='Tests.CreateNewReturnInvoiceTest.createNewCashbackSalesInvoice()'><b>createNewCashbackSalesInvoice</b><br>Test class: Tests.CreateNewReturnInvoiceTest<br>Parameters: Cashback001, Nahla, Aug 12 2024, Aug 12 2024, test invoice notes, 500, SA_SA_S050-مرتجع</td>
 <td></td>
-<td>23</td>
-<td>Tests.CreateNewReturnInvoiceTest@6f53b8a</td></tr>
+<td>16</td>
+<td>Tests.CreateNewReturnInvoiceTest@2a693f59</td></tr>
 <tr>
-<td title='Tests.CreateNewCompanyTest.createNewCompany()'><b>createNewCompany</b><br>Test class: Tests.CreateNewCompanyTest<br>Parameters: Fai, منشأة, مؤسسة, 1234567890, 1111122222, 0987654321, 311111111111113, Jan 01 2024, شهري, mario@fai.sa, Mario Nady, مالك الحساب</td>
+<td title='Tests.CreateNewReturnInvoiceTest.createNewSalesReturnInvoiceWithoutReferenceInvoice()'><b>createNewSalesReturnInvoiceWithoutReferenceInvoice</b><br>Test class: Tests.CreateNewReturnInvoiceTest<br>Parameters: return001, Nahla, Aug 05 2024, Aug 05 2024, test invoice notes, product1, بضائع, test description, 1, 0, SA_SA_S050-مرتجع</td>
 <td></td>
-<td>29</td>
-<td>Tests.CreateNewCompanyTest@71075444</td></tr>
+<td>18</td>
+<td>Tests.CreateNewReturnInvoiceTest@2a693f59</td></tr>
+<tr>
+<td title='Tests.CreateNewReturnInvoiceTest.createNewPurchaseReturnInvoiceWithoutReferenceInvoice()'><b>createNewPurchaseReturnInvoiceWithoutReferenceInvoice</b><br>Test class: Tests.CreateNewReturnInvoiceTest<br>Parameters: p_return001, Nahla, Aug 05 2024, Aug 05 2024, test invoice notes, product2, أصل, test description, 1, 0, SA_PU_S050-مرتجع</td>
+<td></td>
+<td>17</td>
+<td>Tests.CreateNewReturnInvoiceTest@2a693f59</td></tr>
+<tr>
+<td title='Tests.CreateNewReturnInvoiceTest.createNewReturnSalesInvoice()'><b>createNewReturnSalesInvoice</b><br>Test class: Tests.CreateNewReturnInvoiceTest<br>Parameters: sales001, sales001_return, Jul 05 2024, Jul 05 2024, test invoice notes, 1</td>
+<td></td>
+<td>15</td>
+<td>Tests.CreateNewReturnInvoiceTest@2a693f59</td></tr>
+<tr>
+<td title='Tests.CreateNewReturnInvoiceTest.createNewReturnPurchaseInvoice()'><b>createNewReturnPurchaseInvoice</b><br>Test class: Tests.CreateNewReturnInvoiceTest<br>Parameters: purchases001, purchases001_return, Jul 05 2024, Jul 05 2024, test invoice notes, 1</td>
+<td></td>
+<td>16</td>
+<td>Tests.CreateNewReturnInvoiceTest@2a693f59</td></tr>
+<tr>
+<td title='Tests.CreateNewInvoiceTest.createNewSalesInvoice()'><b>createNewSalesInvoice</b><br>Test class: Tests.CreateNewInvoiceTest<br>Parameters: Aug001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, product1, بضائع, test product description, 5, 10, SA_SA_S050</td>
+<td></td>
+<td>16</td>
+<td>Tests.CreateNewInvoiceTest@302c971f</td></tr>
 </table><p>
 </body>
 </html>

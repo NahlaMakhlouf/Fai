@@ -3,13 +3,13 @@
 <suite name="Suite" >
   <test name="Test">
     <classes>
-      <class name="Tests.LoginTest"/>
+      <class name="Tests.LoginTest"/> 
       <class name="Tests.CreateNewCompanyTest"/>
       <class name="Tests.CreateNewClientTest"/>
       <class name="Tests.CreateNewProductTest"/>
       <class name="Tests.CreateNewInvoiceTest"/>
+      <class name="Tests.CreateNewReturnInvoiceTest"/> 
       <class name="Tests.ImportInvoicesTest"/>
-      <class name="Tests.CreateNewReturnInvoiceTest"/>  
       <class name="Tests.CreateNewVATReportTest"/>
     </classes>
   </test> <!-- Test -->

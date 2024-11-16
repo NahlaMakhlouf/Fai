@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-11T15:17:23 EET" name="Default suite" finished-at="2024-11-11T15:17:56 EET" duration-ms="32946">
+  <suite started-at="2024-11-16T19:34:42 EET" name="Default suite" finished-at="2024-11-16T19:35:25 EET" duration-ms="42849">
     <groups>
     </groups>
-    <test started-at="2024-11-11T15:17:23 EET" name="Default test" finished-at="2024-11-11T15:17:56 EET" duration-ms="32946">
-      <class name="Tests.CreateNewReturnInvoiceTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.CreateNewReturnInvoiceTest@305ffe9e]" started-at="2024-11-11T15:17:23 EET" name="setUp" finished-at="2024-11-11T15:17:30 EET" duration-ms="7157" status="PASS">
+    <test started-at="2024-11-16T19:34:42 EET" name="Default test" finished-at="2024-11-16T19:35:25 EET" duration-ms="42849">
+      <class name="Tests.CreateNewInvoiceTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.CreateNewInvoiceTest@359df09a]" started-at="2024-11-16T19:34:42 EET" name="setUp" finished-at="2024-11-16T19:34:47 EET" duration-ms="5070" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Tests.CreateNewReturnInvoiceTest@305ffe9e]" started-at="2024-11-11T15:17:30 EET" name="beforeClass" finished-at="2024-11-11T15:17:35 EET" duration-ms="5122" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Tests.CreateNewInvoiceTest@359df09a]" started-at="2024-11-16T19:34:47 EET" name="beforeClass" finished-at="2024-11-16T19:34:53 EET" duration-ms="5666" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="createNewPurchaseCashbackInvoice(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:Tests.CreateNewReturnInvoiceTest@305ffe9e]" started-at="2024-11-11T15:17:37 EET" name="createNewPurchaseCashbackInvoice" data-provider="getPurchasesCashbackInvoiceData" finished-at="2024-11-11T15:17:56 EET" duration-ms="19262" status="PASS">
+        <test-method signature="createNewSalesInvoice(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:Tests.CreateNewInvoiceTest@359df09a]" started-at="2024-11-16T19:34:56 EET" name="createNewSalesInvoice" data-provider="getSalesInvoiceData" finished-at="2024-11-16T19:35:25 EET" duration-ms="28846" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[p_Cashback001]]>
+                <![CDATA[Aug001]]>
               </value>
             </param>
             <param index="1">
@@ -44,19 +44,39 @@
             </param>
             <param index="5">
               <value>
-                <![CDATA[1000]]>
+                <![CDATA[product1]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[SA_PU_S050-مرتجع]]>
+                <![CDATA[بضائع]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[test product description]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[SA_SA_S050]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createNewPurchaseCashbackInvoice -->
-      </class> <!-- Tests.CreateNewReturnInvoiceTest -->
+        </test-method> <!-- createNewSalesInvoice -->
+      </class> <!-- Tests.CreateNewInvoiceTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

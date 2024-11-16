@@ -3,20 +3,26 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="Tests.CreateNewInvoiceTest">
+        <methods>
+          <include name="createNewPurchaseInvoice" invocation-numbers="0"/>
+          <include name="createNewSalesInvoice" invocation-numbers="0"/>
+          <include name="beforeClass"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Tests.CreateNewInvoiceTest -->
       <class name="Tests.CreateNewReturnInvoiceTest">
         <methods>
+          <include name="createNewPurchaseCashbackInvoice" invocation-numbers="0"/>
+          <include name="createNewReturnPurchaseInvoice" invocation-numbers="0"/>
+          <include name="createNewCashbackSalesInvoice" invocation-numbers="0"/>
+          <include name="createNewReturnSalesInvoice" invocation-numbers="0"/>
+          <include name="createNewSalesReturnInvoiceWithoutReferenceInvoice" invocation-numbers="0"/>
           <include name="createNewPurchaseReturnInvoiceWithoutReferenceInvoice" invocation-numbers="0"/>
           <include name="beforeClass"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- Tests.CreateNewReturnInvoiceTest -->
-      <class name="Tests.CreateNewInvoiceTest">
-        <methods>
-          <include name="createNewPurchaseInvoice" invocation-numbers="0"/>
-          <include name="beforeClass"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- Tests.CreateNewInvoiceTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

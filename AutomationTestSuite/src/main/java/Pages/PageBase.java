@@ -33,7 +33,8 @@ public class PageBase {
 	private By calendarHeader = By.xpath("//button[contains(@class, 'mantine-CalendarHeader-calendarHeaderLevel')]");
 	private By loader = By.id("partiallyLoader");
 	private By pageTitle = By.xpath("(//div/p)[5]");
-	private By success_Msg = By.cssSelector("div[class*='Toastify__toast'] > div");
+	private By success_Msg =  By.cssSelector("div[class*='Toastify__toast--success'] > div >:last-child");
+	
 
 	public void setDate(By dateFeild, String dateValue) {
 
@@ -85,7 +86,6 @@ public class PageBase {
 	public String getSuccessMsg() throws InterruptedException {
 		handleLoaderDisplay();
 		String successMsg = driverWait.until(ExpectedConditions.visibilityOfElementLocated(success_Msg)).getText();
-		Thread.sleep(2000);
 		return successMsg;
 		}
 

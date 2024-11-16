@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -37,14 +38,13 @@ public class CreateNewInvoiceTest extends TestBase {
 		dashboard.browseCompany("Automation");
 	}
 
-
 	@DataProvider
 	public static Object[][] getSalesInvoiceData() throws FileNotFoundException, IOException {
 		ExcelDataProvider.openExcel(".\\src\\test\\resources\\data.xlsx", "sales");
 		Object[][] data = ExcelDataProvider.getSheetData();
 		return data;
 	}
-	
+
 	@DataProvider
 	public static Object[][] getPurchasesInvoiceData() throws FileNotFoundException, IOException {
 		ExcelDataProvider.openExcel(".\\src\\test\\resources\\data.xlsx", "purchases");
@@ -56,7 +56,7 @@ public class CreateNewInvoiceTest extends TestBase {
 	public void createNewSalesInvoice(String invoiceNumber, String clientName, String invoiceDate, String payementDate,
 			String invoiceNotes, String product, String category, String productDescription, String quantity,
 			String discount, String VATCode) throws InterruptedException {
-		
+
 		companyDashboard.openModule("sales");
 		salesModule.openCreateInvoicePage();
 		Assert.assertEquals(createNewInvoicePage.getStepInfo(), "1 - البيانات الأساسية");
@@ -64,15 +64,15 @@ public class CreateNewInvoiceTest extends TestBase {
 
 		Assert.assertEquals(createNewInvoicePage.getStepInfo(), "2 - إضافة المنتجات");
 		createNewInvoicePage.CreateNewInvoiceStep2(product, category, productDescription, quantity, discount, VATCode);
-		
+
 		Assert.assertTrue(salesModule.getSuccessMsg().contains("تم إنشاء الفاتورة"));
 	}
-	
+
 	@Test(dataProvider = "getPurchasesInvoiceData", priority = 2)
-	public void createNewPurchaseInvoice(String invoiceNumber, String clientName, String invoiceDate, String payementDate,
-			String invoiceNotes, String product, String category, String productDescription, String quantity,
-			String discount, String VATCode) throws InterruptedException {
-		
+	public void createNewPurchaseInvoice(String invoiceNumber, String clientName, String invoiceDate,
+			String payementDate, String invoiceNotes, String product, String category, String productDescription,
+			String quantity, String discount, String VATCode) throws InterruptedException {
+
 		companyDashboard.openModule("purchases");
 		purchasesModule.openCreateInvoicePage();
 		Assert.assertEquals(createNewInvoicePage.getStepInfo(), "1 - البيانات الأساسية");
@@ -80,7 +80,7 @@ public class CreateNewInvoiceTest extends TestBase {
 
 		Assert.assertEquals(createNewInvoicePage.getStepInfo(), "2 - إضافة المنتجات");
 		createNewInvoicePage.CreateNewInvoiceStep2(product, category, productDescription, quantity, discount, VATCode);
-		
+
 		Assert.assertTrue(purchasesModule.getSuccessMsg().contains("تم إنشاء الفاتورة"));
 	}
 
