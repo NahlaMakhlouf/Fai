@@ -9,7 +9,7 @@ public class SalesPage extends PageBase {
 		super(driver);
 	}
 
-	private By invoicesRegistration_List = By.xpath("(//button[@class='sc-eCstZk bLLABZ'])[2]");
+	private By invoicesRegistration_List = By.xpath("(//button[@class='sc-eCstZk dQmibS'])[2]");
 	private By createInvoice_Btn = By.xpath("(//button[contains(@class, 'mantine-Menu-item')])[1]");
 	private By createReturnInvoice_Btn = By.xpath("(//button[contains(@class, 'mantine-Menu-item')])[2]");
 	private By importInvoices_Btn = By.xpath("(//button[contains(@class, 'mantine-Menu-item')])[3]");

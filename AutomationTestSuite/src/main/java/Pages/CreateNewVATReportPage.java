@@ -21,7 +21,7 @@ public class CreateNewVATReportPage extends PageBase{
 	private By description_Input = By.name("description");
 	private By upload_Btn=By.xpath("//input[@type='file']");
 	private By next_Btn = By.xpath("//button[@type='submit']");
-	private By create_Btn = By.xpath("//button[@class='sc-eCstZk leFYVO']");
+	private By create_Btn = By.cssSelector("button.sc-eCstZk.dDpUpp");
 	
 	public String getStepInfo() {
 		return driverWait.until(ExpectedConditions.visibilityOfElementLocated(step_No)).getText();

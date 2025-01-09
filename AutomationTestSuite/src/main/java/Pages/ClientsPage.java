@@ -9,7 +9,7 @@ public class ClientsPage extends PageBase{
 		super(driver);
 	}
 	
-	private By addClient_List = By.xpath("//button[@class='sc-eCstZk doAwyZ']");
+	private By addClient_List = By.cssSelector("button.sc-eCstZk.dvmyRG");
 	private By addClient_Btn = By.xpath("(//button[contains(@class, 'mantine-Menu-item')])[1]");
 	
 	public void openCreateNewClientPage() {

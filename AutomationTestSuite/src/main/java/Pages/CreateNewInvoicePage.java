@@ -30,7 +30,7 @@ public class CreateNewInvoicePage extends PageBase {
 	private By VATCode_Input = By.xpath("(//input[contains(@class,'mantine-Input-input')])[3]");
 	private By VATCode_Item = By.xpath("(//div[contains(@class, 'mantine-Select-item')])[2]");
 	private By addToList_Btn = By.xpath("//button[@type='submit']");
-	private By create_Btn = By.cssSelector("button.sc-eCstZk.cjwIVv");
+	private By create_Btn = By.cssSelector("button.sc-eCstZk.hYQKNc");
 	
 	public String getStepInfo() {
 		return driverWait.until(ExpectedConditions.visibilityOfElementLocated(step_Info)).getText();

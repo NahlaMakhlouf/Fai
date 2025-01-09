@@ -103,6 +103,9 @@ public class CreateNewReturnInvoiceTest extends TestBase {
 		Assert.assertEquals(createNewReturnIncoicePage.getStepInfo(), "4 - إضافة المرتجعات");
 		createNewReturnIncoicePage.CreateNewReturnInvoiceStep4(returnQuantity);
 		
+		Assert.assertEquals(createNewReturnIncoicePage.getStepInfo(),"5 - مراجعة المرتجعات");
+		createNewReturnIncoicePage.CreateNewReturnInvoiceStep5();
+
 		Assert.assertTrue(salesModule.getSuccessMsg().contains("تم إنشاء الفاتورة"));
 	}
 
@@ -164,6 +167,9 @@ public class CreateNewReturnInvoiceTest extends TestBase {
 		
 		Assert.assertEquals(createNewReturnIncoicePage.getStepInfo(), "4 - إضافة المرتجعات");
 		createNewReturnIncoicePage.CreateNewReturnInvoiceStep4(returnQuantity);
+		
+		Assert.assertEquals(createNewReturnIncoicePage.getStepInfo(),"5 - مراجعة المرتجعات");
+		createNewReturnIncoicePage.CreateNewReturnInvoiceStep5();
 		
 		Assert.assertTrue(purchasesModule.getSuccessMsg().contains("تم إنشاء الفاتورة"));
 	}

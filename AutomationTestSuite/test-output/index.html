@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\lenovo\AppData\Local\Temp\testng-eclipse--564346276\testng-customsuite.xml</span>
+                    <span>C:\Users\lenovo\AppData\Local\Temp\testng-eclipse-1033547094\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Tests.CreateNewInvoiceTest" class="method navigator-link" hash-for-method="createNewSalesInvoice(Aug001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, product1, بضائع, test product descripti...)">createNewSalesInvoice(Aug001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, product1, بضائع, test product descripti...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Tests.CreateNewReturnInvoiceTest" class="method navigator-link" hash-for-method="createNewPurchaseCashbackInvoice(p_Cashback001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, 1000, SA_PU_S050-مرتجع)">createNewPurchaseCashbackInvoice(p_Cashback001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, 1000, SA_PU_S050-مرتجع)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -121,15 +121,15 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Tests.CreateNewInvoiceTest</span>
+              <span class="class-name">Tests.CreateNewReturnInvoiceTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createNewSalesInvoice(Aug001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, product1, بضائع, test product descripti...)">
-                  </a> <!-- createNewSalesInvoice(Aug001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, product1, بضائع, test product descripti...) -->
-                  <span class="method-name">createNewSalesInvoice</span>
-                  <span class="parameters">(Aug001,Nahla,Aug 01 2024,Aug 02 2024,test invoice notes,product1,بضائع,test product description,5,10,SA_SA_S050)</span>
+                  <a name="createNewPurchaseCashbackInvoice(p_Cashback001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, 1000, SA_PU_S050-مرتجع)">
+                  </a> <!-- createNewPurchaseCashbackInvoice(p_Cashback001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, 1000, SA_PU_S050-مرتجع) -->
+                  <span class="method-name">createNewPurchaseCashbackInvoice</span>
+                  <span class="parameters">(p_Cashback001,Nahla,Aug 01 2024,Aug 02 2024,test invoice notes,1000,SA_PU_S050-مرتجع)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,7 +137,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\lenovo\AppData\Local\Temp\testng-eclipse--564346276\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\lenovo\AppData\Local\Temp\testng-eclipse-1033547094\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -146,11 +146,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Tests.CreateNewInvoiceTest&quot;&gt;
+      &lt;class name=&quot;Tests.CreateNewReturnInvoiceTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;createNewSalesInvoice&quot;/&gt;
+          &lt;include name=&quot;createNewPurchaseCashbackInvoice&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- Tests.CreateNewInvoiceTest --&gt;
+      &lt;/class&gt; &lt;!-- Tests.CreateNewReturnInvoiceTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -192,14 +192,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createNewSalesInvoice')
-data.setCell(0, 2, 'Tests.CreateNewInvoiceTest')
-data.setCell(0, 3, 28846);
+data.setCell(0, 1, 'createNewPurchaseCashbackInvoice')
+data.setCell(0, 2, 'Tests.CreateNewReturnInvoiceTest')
+data.setCell(0, 3, 16077);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 28 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -214,13 +214,21 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">5 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">Tests.CreateNewInvoiceTest</span>
+              <span class="ignored-class-name">Tests.CreateNewReturnInvoiceTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">createNewPurchaseInvoice</span>
+                <span class="ignored-method-name">createNewReturnSalesInvoice</span>
+                <br/>
+                <span class="ignored-method-name">createNewReturnPurchaseInvoice</span>
+                <br/>
+                <span class="ignored-method-name">createNewPurchaseReturnInvoiceWithoutReferenceInvoice</span>
+                <br/>
+                <span class="ignored-method-name">createNewSalesReturnInvoiceWithoutReferenceInvoice</span>
+                <br/>
+                <span class="ignored-method-name">createNewCashbackSalesInvoice</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -232,18 +240,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Tests.CreateNewInvoiceTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Tests.CreateNewReturnInvoiceTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">5071 ms</span>
+                <span class="method-start">3251 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">createNewSalesInvoice(Aug001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, product1, بضائع, test product descripti...)</span>
-                <span class="method-start">13975 ms</span>
+                <span class="method-name">createNewPurchaseCashbackInvoice(p_Cashback001, Nahla, Aug 01 2024, Aug 02 2024, test invoice notes, 1000, SA_PU_S050-مرتجع)</span>
+                <span class="method-start">8660 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

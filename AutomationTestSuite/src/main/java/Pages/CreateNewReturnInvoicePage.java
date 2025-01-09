@@ -22,15 +22,13 @@ public class CreateNewReturnInvoicePage extends CreateNewInvoicePage {
 	private By menu_item = By.xpath("(//div[contains(@class, 'mantine-Select-item')])[1]");
 	private By invoiceNotes_Input = By.name("description");
 	private By upload_Btn = By.xpath("//input[@type='file']");
-	private By editProduct_Btn = By.xpath("//div[@class='controls']/div");
-	private By productQuantity_Input = By.name("quantity");
+	private By returnQuantity_Input = By.cssSelector("[name*='return_quantity']");
 	private By productPrice_Input = By.name("product_price");
 	private By VATCode_Input = By.xpath("//input[contains(@class,'mantine-Input-input')]");
 	private By VATCode_Item = By.xpath("(//div[contains(@class, 'mantine-Select-item')])[2]");
 
 	private By next_Btn = By.xpath("//button[@type='submit']");
-	private By addToList_Btn = By.xpath("//button[@type='submit']");
-	private By create_Btn = By.cssSelector("button[type='button'].sc-eCstZk.cjwIVv");
+	private By create_Btn = By.cssSelector("button.sc-eCstZk.hYQKNc");
 
 
 	public void CreateNewReturnInvoiceStep1() {
@@ -58,13 +56,14 @@ public class CreateNewReturnInvoicePage extends CreateNewInvoicePage {
 	}
 
 	public void CreateNewReturnInvoiceStep4(String quantity) {
-		driverWait.until(ExpectedConditions.elementToBeClickable(editProduct_Btn)).click();
+		driver.findElement(returnQuantity_Input).sendKeys(Keys.BACK_SPACE);
+		driver.findElement(returnQuantity_Input).sendKeys(quantity);
+		driverWait.until(ExpectedConditions.elementToBeClickable(next_Btn)).click();
 		handleLoaderDisplay();
-		driver.findElement(productQuantity_Input).sendKeys(Keys.BACK_SPACE);
-		driver.findElement(productQuantity_Input).sendKeys(quantity);
-		driver.findElement(addToList_Btn).click();
-		handleLoaderDisplay();
-		driver.findElement(create_Btn).click();
+	}
+	
+	public void CreateNewReturnInvoiceStep5() {
+		driverWait.until(ExpectedConditions.elementToBeClickable(create_Btn)).click();
 		handleLoaderDisplay();
 	}
 

@@ -9,7 +9,7 @@ public class ProductsPage extends PageBase{
 		super(driver);
 	}
 	
-	private By addProductList = By.xpath("//button[@class='sc-eCstZk leFYVO']");
+	private By addProductList = By.cssSelector("button.sc-eCstZk.dDpUpp");
 	private By addProductBtn = By.xpath("//button[contains(@class, 'mantine-Menu-item')]");
 	
 	public void openCreateNewProductPage() {
