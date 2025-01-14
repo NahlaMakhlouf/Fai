@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" >
-  <test name="Test">
-    <classes>
-      <class name="Tests.LoginTest"/> 
-      <class name="Tests.CreateNewCompanyTest"/>
-      <class name="Tests.CreateNewClientTest"/>
-      <class name="Tests.CreateNewProductTest"/>
-      <class name="Tests.CreateNewInvoiceTest"/>
-      <class name="Tests.CreateNewReturnInvoiceTest"/> 
-      <class name="Tests.ImportInvoicesTest"/>
-      <class name="Tests.CreateNewVATReportTest"/>
-    </classes>
-  </test> <!-- Test -->
+<suite name="Suite">
+	<test name="Test"> 
+		<classes>
+			<class name="Tests.LoginTest" />
+			<class name="Tests.CreateNewCompanyTest" />
+			<class name="Tests.CreateNewClientTest" />
+			<class name="Tests.CreateNewProductTest" />
+			<class name="Tests.CreateNewInvoiceTest" />
+			<class name="Tests.CreateNewReturnInvoiceTest" />
+			<class name="Tests.ImportInvoicesTest" />
+			<class name="Tests.CreateNewVATReportTest" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -37,7 +37,7 @@ public class CreateNewClientTest extends TestBase {
 
 	@BeforeMethod
 	public void login() throws InterruptedException {
-		loginPage.login("nahlamakhlouf1@gmail.com", "123456");
+		loginPage.login(username, password);
 		dashboard.browseCompany("Automation");
 		companyDashboard.openModule("clients");
 		clientsModule.openCreateNewClientPage();

@@ -30,7 +30,7 @@ public class CreateNewProductTest extends TestBase{
 		companyDashboard = new CompanyDashboardPage(driver);
 		productsModule = new ProductsPage(driver);
 		createNewProductPage = new CreateNewProductPage(driver);
-		loginPage.login("nahlamakhlouf1@gmail.com", "123456");
+		loginPage.login(username, password);
 		dashboard.browseCompany("Automation");
 		companyDashboard.openModule("products");
 	}

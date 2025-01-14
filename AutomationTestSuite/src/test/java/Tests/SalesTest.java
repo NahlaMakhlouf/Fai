@@ -1,5 +1,6 @@
 package Tests;
 
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -34,9 +35,9 @@ public class SalesTest extends TestBase {
 
 	}
 
-	@BeforeMethod
+	@BeforeMethod 
 	public void beforeMethod() throws InterruptedException {
-		loginPage.login("nahlamakhlouf1@gmail.com", "123456");
+		loginPage.login(username, password);
 		dashboard.browseCompany("Automation");
 		companyDashboard.openModule("sales");
 	}

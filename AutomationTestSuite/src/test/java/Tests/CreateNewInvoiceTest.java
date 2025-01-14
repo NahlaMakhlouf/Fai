@@ -33,7 +33,7 @@ public class CreateNewInvoiceTest extends TestBase {
 		salesModule = new SalesPage(driver);
 		purchasesModule = new PurchasesPage(driver);
 		createNewInvoicePage = new CreateNewInvoicePage(driver);
-		loginPage.login("nahlamakhlouf1@gmail.com", "123456");
+		loginPage.login(username, password);
 		dashboard.browseCompany("Automation");
 	}
 

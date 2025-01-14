@@ -30,7 +30,7 @@ public class ClientsTest extends TestBase{
 	}
 	@BeforeMethod
 	public void beforeMethod() throws InterruptedException {
-		loginPage.login("nahlamakhlouf1@gmail.com", "123456");
+		loginPage.login(username, password);
 		dashboard.browseCompany("Automation");
 		companyDashboard.openModule("clients");
 	}

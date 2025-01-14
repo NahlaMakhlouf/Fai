@@ -36,7 +36,7 @@ public class CreateNewReturnInvoiceTest extends TestBase {
 		purchasesModule = new PurchasesPage(driver);
 		createNewInvoicePage = new CreateNewInvoicePage(driver);
 		createNewReturnIncoicePage = new CreateNewReturnInvoicePage(driver);
-		loginPage.login("nahlamakhlouf1@gmail.com", "123456");
+		loginPage.login(username, password);
 		dashboard.browseCompany("Automation");
 	}
 

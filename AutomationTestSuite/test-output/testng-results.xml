@@ -1,21 +1,842 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="15" passed="9" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-09T16:01:51 EET" name="Default suite" finished-at="2025-01-09T16:02:16 EET" duration-ms="24753">
+  <suite started-at="2025-01-14T20:43:45 EET" name="Suite" finished-at="2025-01-14T21:02:29 EET" duration-ms="1123266">
     <groups>
     </groups>
-    <test started-at="2025-01-09T16:01:51 EET" name="Default test" finished-at="2025-01-09T16:02:16 EET" duration-ms="24753">
-      <class name="Tests.CreateNewReturnInvoiceTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.CreateNewReturnInvoiceTest@305ffe9e]" started-at="2025-01-09T16:01:51 EET" name="setUp" finished-at="2025-01-09T16:01:55 EET" duration-ms="3250" status="PASS">
+    <test started-at="2025-01-14T20:43:45 EET" name="Test" finished-at="2025-01-14T21:02:29 EET" duration-ms="1123266">
+      <class name="Tests.CreateNewInvoiceTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.CreateNewInvoiceTest@4d1bf319]" started-at="2025-01-14T20:44:33 EET" name="setUp" finished-at="2025-01-14T20:44:37 EET" duration-ms="3891" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Tests.CreateNewReturnInvoiceTest@305ffe9e]" started-at="2025-01-09T16:01:55 EET" name="beforeClass" finished-at="2025-01-09T16:01:59 EET" duration-ms="4193" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Tests.CreateNewInvoiceTest@4d1bf319]" started-at="2025-01-14T20:44:37 EET" name="beforeClass" finished-at="2025-01-14T20:44:40 EET" duration-ms="3682" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="createNewPurchaseCashbackInvoice(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:Tests.CreateNewReturnInvoiceTest@305ffe9e]" started-at="2025-01-09T16:02:00 EET" name="createNewPurchaseCashbackInvoice" data-provider="getPurchasesCashbackInvoiceData" finished-at="2025-01-09T16:02:16 EET" duration-ms="16077" status="PASS">
+        <test-method signature="createNewSalesInvoice(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:Tests.CreateNewInvoiceTest@4d1bf319]" started-at="2025-01-14T20:44:40 EET" name="createNewSalesInvoice" data-provider="getSalesInvoiceData" finished-at="2025-01-14T20:50:14 EET" duration-ms="333573" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Aug001]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nahla]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 01 2024]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Aug 02 2024]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test invoice notes]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[product1]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[بضائع]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[test product description]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[SA_SA_S050]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewSalesInvoice -->
+        <test-method signature="createNewPurchaseInvoice(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:Tests.CreateNewInvoiceTest@4d1bf319]" started-at="2025-01-14T20:50:14 EET" name="createNewPurchaseInvoice" data-provider="getPurchasesInvoiceData" finished-at="2025-01-14T20:50:14 EET" duration-ms="0" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFCell.getCellType()" because "TestData.ExcelDataProvider.cell" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFCell.getCellType()" because "TestData.ExcelDataProvider.cell" is null
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:57)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:157)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:803)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:728)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:911)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFCell.getCellType()" because "TestData.ExcelDataProvider.cell" is null
+at TestData.ExcelDataProvider.getSheetData(ExcelDataProvider.java:55)
+at Tests.CreateNewInvoiceTest.getPurchasesInvoiceData(CreateNewInvoiceTest.java:50)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
+... 25 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewPurchaseInvoice -->
+      </class> <!-- Tests.CreateNewInvoiceTest -->
+      <class name="Tests.ImportInvoicesTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.ImportInvoicesTest@5c80cf32]" started-at="2025-01-14T20:54:00 EET" name="setUp" finished-at="2025-01-14T20:54:02 EET" duration-ms="2300" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Tests.ImportInvoicesTest@5c80cf32]" started-at="2025-01-14T20:54:02 EET" name="beforeClass" finished-at="2025-01-14T20:54:07 EET" duration-ms="4696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="ImportSalesInvoices()[pri:1, instance:Tests.ImportInvoicesTest@5c80cf32]" started-at="2025-01-14T20:54:07 EET" name="ImportSalesInvoices" finished-at="2025-01-14T20:54:12 EET" duration-ms="4810" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ImportSalesInvoices -->
+        <test-method signature="ImportPurchaseInvoices()[pri:2, instance:Tests.ImportInvoicesTest@5c80cf32]" started-at="2025-01-14T20:54:12 EET" name="ImportPurchaseInvoices" finished-at="2025-01-14T20:54:16 EET" duration-ms="4297" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ImportPurchaseInvoices -->
+      </class> <!-- Tests.ImportInvoicesTest -->
+      <class name="Tests.CreateNewVATReportTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.CreateNewVATReportTest@7d900ecf]" started-at="2025-01-14T20:54:16 EET" name="setUp" finished-at="2025-01-14T20:54:18 EET" duration-ms="2095" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Tests.CreateNewVATReportTest@7d900ecf]" started-at="2025-01-14T20:54:18 EET" name="beforeClass" finished-at="2025-01-14T20:54:18 EET" duration-ms="221" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="login()[pri:0, instance:Tests.CreateNewVATReportTest@7d900ecf]" started-at="2025-01-14T20:54:18 EET" name="login" finished-at="2025-01-14T20:54:26 EET" duration-ms="7391" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="createNewVatReport(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Tests.CreateNewVATReportTest@7d900ecf]" started-at="2025-01-14T20:54:26 EET" name="createNewVatReport" data-provider="getReportData" finished-at="2025-01-14T21:02:29 EET" duration-ms="482917" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[يناير 2025]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Jan 2025]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[يناير]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[2025]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[تقرير شهر يناير سنه 2025]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: div[class*='Toastify__toast--success'] > div >:last-child (tried for 480 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: div[class*='Toastify__toast--success'] > div >:last-child (tried for 480 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+at Pages.PageBase.getSuccessMsg(PageBase.java:88)
+at Tests.CreateNewVATReportTest.createNewVatReport(CreateNewVATReportTest.java:56)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.265)
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [02463ebc593f493a493991b46e7b96ff, findElement {using=css selector, value=div[class*='Toastify__toast--success'] > div >:last-child}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52982}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52982/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 02463ebc593f493a493991b46e7b96ff
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+... 28 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewVatReport -->
+      </class> <!-- Tests.CreateNewVATReportTest -->
+      <class name="Tests.CreateNewCompanyTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.CreateNewCompanyTest@71075444]" started-at="2025-01-14T20:43:54 EET" name="setUp" finished-at="2025-01-14T20:43:56 EET" duration-ms="2821" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Tests.CreateNewCompanyTest@71075444]" started-at="2025-01-14T20:43:56 EET" name="beforeClass" finished-at="2025-01-14T20:43:56 EET" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="login()[pri:0, instance:Tests.CreateNewCompanyTest@71075444]" started-at="2025-01-14T20:43:56 EET" name="login" finished-at="2025-01-14T20:43:59 EET" duration-ms="2578" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="createNewCompany(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Tests.CreateNewCompanyTest@71075444]" started-at="2025-01-14T20:43:59 EET" name="createNewCompany" data-provider="getCompanyData" finished-at="2025-01-14T20:44:01 EET" duration-ms="1690" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Fai]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[منشأة]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[مؤسسة]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234567890]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1111122222]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[0987654321]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[311111111111113]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Jan 01 2024]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[شهري]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[mario@fai.sa]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Mario Nady]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[مالك الحساب]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"*[name='unified_number']"}
+  (Session info: chrome=131.0.6778.265)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [00418096923f0a999ad27f686f643585, findElement {using=name, value=unified_number}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51932}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51932/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 00418096923f0a999ad27f686f643585]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='unified_number']"}
+  (Session info: chrome=131.0.6778.265)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [00418096923f0a999ad27f686f643585, findElement {using=name, value=unified_number}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51932}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51932/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 00418096923f0a999ad27f686f643585
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+at Pages.CreateNewCompanyPage.CreateNewCompanyStep2(CreateNewCompanyPage.java:62)
+at Tests.CreateNewCompanyTest.createNewCompany(CreateNewCompanyTest.java:48)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewCompany -->
+      </class> <!-- Tests.CreateNewCompanyTest -->
+      <class name="Tests.CreateNewProductTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.CreateNewProductTest@6b695b06]" started-at="2025-01-14T20:44:20 EET" name="setUp" finished-at="2025-01-14T20:44:23 EET" duration-ms="3438" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Tests.CreateNewProductTest@6b695b06]" started-at="2025-01-14T20:44:23 EET" name="beforeClass" finished-at="2025-01-14T20:44:27 EET" duration-ms="4477" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Tests.CreateNewProductTest@6b695b06]" started-at="2025-01-14T20:44:28 EET" name="beforeMethod" finished-at="2025-01-14T20:44:29 EET" duration-ms="1294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="createNewProduct(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Tests.CreateNewProductTest@6b695b06]" started-at="2025-01-14T20:44:29 EET" name="createNewProduct" data-provider="getProductData" finished-at="2025-01-14T20:44:33 EET" duration-ms="3953" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[منتج]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[product]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[وصف المنتج]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[product description]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[كلاهما]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Auto]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewProduct -->
+      </class> <!-- Tests.CreateNewProductTest -->
+      <class name="Tests.CreateNewReturnInvoiceTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.CreateNewReturnInvoiceTest@6f53b8a]" started-at="2025-01-14T20:50:14 EET" name="setUp" finished-at="2025-01-14T20:50:16 EET" duration-ms="2268" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Tests.CreateNewReturnInvoiceTest@6f53b8a]" started-at="2025-01-14T20:50:16 EET" name="beforeClass" finished-at="2025-01-14T20:50:19 EET" duration-ms="3086" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="createNewReturnSalesInvoice(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:Tests.CreateNewReturnInvoiceTest@6f53b8a]" started-at="2025-01-14T20:50:19 EET" name="createNewReturnSalesInvoice" data-provider="getSalesReturnInvoiceData" finished-at="2025-01-14T20:50:26 EET" duration-ms="6240" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sales001]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sales001_return]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Jul 05 2024]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Jul 05 2024]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test invoice notes]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(@class, 'mantine-DatePickerInput-pickerControl') and text()='Jul']"}
+  (Session info: chrome=131.0.6778.265)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [238784d93ed2baa71eea8457174cb5d2, findElement {using=xpath, value=//button[contains(@class, 'mantine-DatePickerInput-pickerControl') and text()='Jul']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52650}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52650/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 238784d93ed2baa71eea8457174cb5d2]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(@class, 'mantine-DatePickerInput-pickerControl') and text()='Jul']"}
+  (Session info: chrome=131.0.6778.265)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [238784d93ed2baa71eea8457174cb5d2, findElement {using=xpath, value=//button[contains(@class, 'mantine-DatePickerInput-pickerControl') and text()='Jul']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52650}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52650/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 238784d93ed2baa71eea8457174cb5d2
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+at Pages.PageBase.setDate(PageBase.java:55)
+at Pages.CreateNewReturnInvoicePage.CreateNewReturnInvoiceStep3(CreateNewReturnInvoicePage.java:48)
+at Tests.CreateNewReturnInvoiceTest.createNewReturnSalesInvoice(CreateNewReturnInvoiceTest.java:101)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewReturnSalesInvoice -->
+        <test-method signature="createNewSalesReturnInvoiceWithoutReferenceInvoice(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:Tests.CreateNewReturnInvoiceTest@6f53b8a]" started-at="2025-01-14T20:50:26 EET" name="createNewSalesReturnInvoiceWithoutReferenceInvoice" data-provider="getSalesReturnWithoutReferenceInvoiceData" finished-at="2025-01-14T20:50:53 EET" duration-ms="27360" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[return001]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nahla]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 05 2024]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Aug 05 2024]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test invoice notes]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[product1]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[بضائع]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[test description]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[SA_SA_S050-مرتجع]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewSalesReturnInvoiceWithoutReferenceInvoice -->
+        <test-method signature="createNewCashbackSalesInvoice(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:Tests.CreateNewReturnInvoiceTest@6f53b8a]" started-at="2025-01-14T20:50:53 EET" name="createNewCashbackSalesInvoice" data-provider="getSalesCashbackInvoiceData" finished-at="2025-01-14T20:51:15 EET" duration-ms="21624" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Cashback001]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nahla]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 12 2024]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Aug 12 2024]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test invoice notes]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[500]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[SA_SA_S050-مرتجع]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewCashbackSalesInvoice -->
+        <test-method signature="createNewReturnPurchaseInvoice(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:Tests.CreateNewReturnInvoiceTest@6f53b8a]" started-at="2025-01-14T20:51:15 EET" name="createNewReturnPurchaseInvoice" data-provider="getPurchasesReturnInvoiceData" finished-at="2025-01-14T20:51:20 EET" duration-ms="4952" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[purchases001]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[purchases001_return]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Jul 05 2024]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Jul 05 2024]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test invoice notes]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(@class, 'mantine-DatePickerInput-pickerControl') and text()='Jul']"}
+  (Session info: chrome=131.0.6778.265)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [238784d93ed2baa71eea8457174cb5d2, findElement {using=xpath, value=//button[contains(@class, 'mantine-DatePickerInput-pickerControl') and text()='Jul']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52650}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52650/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 238784d93ed2baa71eea8457174cb5d2]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(@class, 'mantine-DatePickerInput-pickerControl') and text()='Jul']"}
+  (Session info: chrome=131.0.6778.265)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [238784d93ed2baa71eea8457174cb5d2, findElement {using=xpath, value=//button[contains(@class, 'mantine-DatePickerInput-pickerControl') and text()='Jul']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52650}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52650/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 238784d93ed2baa71eea8457174cb5d2
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+at Pages.PageBase.setDate(PageBase.java:55)
+at Pages.CreateNewReturnInvoicePage.CreateNewReturnInvoiceStep3(CreateNewReturnInvoicePage.java:48)
+at Tests.CreateNewReturnInvoiceTest.createNewReturnPurchaseInvoice(CreateNewReturnInvoiceTest.java:166)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewReturnPurchaseInvoice -->
+        <test-method signature="createNewPurchaseReturnInvoiceWithoutReferenceInvoice(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:Tests.CreateNewReturnInvoiceTest@6f53b8a]" started-at="2025-01-14T20:51:20 EET" name="createNewPurchaseReturnInvoiceWithoutReferenceInvoice" data-provider="getPurchasesReturnWithoutReferenceInvoiceData" finished-at="2025-01-14T20:51:36 EET" duration-ms="16250" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[p_return001]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nahla]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 05 2024]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Aug 05 2024]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test invoice notes]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[product2]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[أصل]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[test description]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[SA_PU_S050-مرتجع]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewPurchaseReturnInvoiceWithoutReferenceInvoice -->
+        <test-method signature="createNewPurchaseCashbackInvoice(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:Tests.CreateNewReturnInvoiceTest@6f53b8a]" started-at="2025-01-14T20:51:36 EET" name="createNewPurchaseCashbackInvoice" data-provider="getPurchasesCashbackInvoiceData" finished-at="2025-01-14T20:54:00 EET" duration-ms="143711" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -57,6 +878,224 @@
           </reporter-output>
         </test-method> <!-- createNewPurchaseCashbackInvoice -->
       </class> <!-- Tests.CreateNewReturnInvoiceTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="Tests.CreateNewClientTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.CreateNewClientTest@4f32a3ad]" started-at="2025-01-14T20:44:01 EET" name="setUp" finished-at="2025-01-14T20:44:05 EET" duration-ms="3977" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Tests.CreateNewClientTest@4f32a3ad]" started-at="2025-01-14T20:44:05 EET" name="beforeClass" finished-at="2025-01-14T20:44:05 EET" duration-ms="186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="login()[pri:0, instance:Tests.CreateNewClientTest@4f32a3ad]" started-at="2025-01-14T20:44:05 EET" name="login" finished-at="2025-01-14T20:44:13 EET" duration-ms="7630" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="createNewClient(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Tests.CreateNewClientTest@4f32a3ad]" started-at="2025-01-14T20:44:13 EET" name="createNewClient" data-provider="getClientData" finished-at="2025-01-14T20:44:20 EET" duration-ms="6977" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Both]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[منة الله عماد]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Menna Emad]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[حساب]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[كلاهما]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[مؤسسة]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1111122222]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[2147483647]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[https://fai-wp.ahadtest.com]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[331111111111113]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[مصر]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[الإسكندرية]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[سموحه]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[سموحه]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[smouha]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[0559505553]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[menna@fai.sa]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[ماريو نادى]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[MarioNady]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[مدير منتج]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[product manager]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[mario@fai.sa]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[مُعتَمَد]]>
+              </value>
+            </param>
+            <param index="25">
+              <value>
+                <![CDATA[0559505554]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewClient -->
+      </class> <!-- Tests.CreateNewClientTest -->
+      <class name="Tests.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.LoginTest@312aa7c]" started-at="2025-01-14T20:43:45 EET" name="setUp" finished-at="2025-01-14T20:43:49 EET" duration-ms="3904" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Tests.LoginTest@312aa7c]" started-at="2025-01-14T20:43:49 EET" name="beforeClass" finished-at="2025-01-14T20:43:49 EET" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="loginAndAssert(java.lang.String,java.lang.String)[pri:0, instance:Tests.LoginTest@312aa7c]" started-at="2025-01-14T20:43:50 EET" name="loginAndAssert" data-provider="getLoginData" finished-at="2025-01-14T20:43:54 EET" duration-ms="3256" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[nahlamakhlouf1@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://fai-staging.ahadtest.com/] but found [https://prelive.fai.sa/]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://fai-staging.ahadtest.com/] but found [https://prelive.fai.sa/]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at Tests.LoginTest.loginAndAssert(LoginTest.java:40)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAndAssert -->
+      </class> <!-- Tests.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
