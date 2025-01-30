@@ -20,4 +20,6 @@
     <fullyQualifiedTypeName name="org.testng.annotations.AfterMethod"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+    <fullyQualifiedTypeName name="java.util.Properties"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 </qualifiedTypeNameHistroy>
